@@ -16,5 +16,16 @@ namespace E_Library.Admin
         {
             InitializeComponent();
         }
+
+        private void AdminAccount_Load(object sender, EventArgs e)
+        {
+            viewUserinformation();
+        }
+
+        private void viewUserinformation() {
+            Connection.DB();
+            Function.gen = "SELECT * FROM userinformation";
+            Function.fill(Function.gen, dgvUserinformation);
+        }
     }
 }

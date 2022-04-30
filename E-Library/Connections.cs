@@ -10,7 +10,7 @@ namespace E_Library
     public class Connection
     {
         public static SqlConnection con;
-        private static string dbconnect = "Data Source=WOLF;Initial Catalog=OrnamentalSystem;Integrated Security=True"; //connection string 
+        private static string dbconnect = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\Programming\\C#\\E-Library\\E-Library\\Database\\ELibrary.mdf;Integrated Security=True"; //connection string 
 
         public static void DB()
         {
@@ -27,3 +27,4 @@ namespace E_Library
         }
     }
 }
+//DESKTOP-VJRTO63

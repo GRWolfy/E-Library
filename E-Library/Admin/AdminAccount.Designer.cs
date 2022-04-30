@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgvUserinformation = new Krypton.Toolkit.KryptonDataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserinformation)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvUserinformation
+            // 
+            this.dgvUserinformation.Location = new System.Drawing.Point(87, 67);
+            this.dgvUserinformation.Name = "dgvUserinformation";
+            this.dgvUserinformation.RowTemplate.Height = 25;
+            this.dgvUserinformation.Size = new System.Drawing.Size(570, 263);
+            this.dgvUserinformation.TabIndex = 0;
+            // 
+            // AdminAccount
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvUserinformation);
+            this.Name = "AdminAccount";
             this.Text = "AdminAccount";
+            this.Load += new System.EventHandler(this.AdminAccount_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserinformation)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Krypton.Toolkit.KryptonDataGridView dgvUserinformation;
     }
 }
