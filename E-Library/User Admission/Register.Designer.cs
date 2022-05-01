@@ -275,7 +275,6 @@
         private Krypton.Toolkit.KryptonTextBox txtAddress;
         private Krypton.Toolkit.KryptonButton btnRegister;
         private Krypton.Toolkit.KryptonTextBox txtLastname;
-        private Krypton.Toolkit.KryptonComboBox cmbYear;
         private Krypton.Toolkit.KryptonComboBox cmbYearlevel;
         private Krypton.Toolkit.KryptonComboBox cmbCourse;
         private Krypton.Toolkit.KryptonComboBox cmbGender;
