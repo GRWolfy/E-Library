@@ -1,6 +1,6 @@
 ﻿namespace E_Library.Admin
 {
-    partial class AdminAccount
+    partial class AdminBook
     {
         /// <summary>
         /// Required designer variable.

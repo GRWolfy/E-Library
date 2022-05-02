@@ -1,20 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data.SqlClient;
 
 namespace E_Library.Admin
 {
-    public partial class AdminAccount : Form
+    public partial class AdminBook : Form
     {
         private int id;
-        public AdminAccount()
+        public AdminBook()
         {
             InitializeComponent();
         }
@@ -94,7 +85,7 @@ namespace E_Library.Admin
             txtFirstname.Text = dgvAccounts.Rows[e.RowIndex].Cells["FIRST NAME"].Value.ToString();
             txtLastname.Text = dgvAccounts.Rows[e.RowIndex].Cells["LAST NAME"].Value.ToString();
             cmbGender.Text = dgvAccounts.Rows[e.RowIndex].Cells["GENDER"].Value.ToString();
-            cmbYearlevel.Text  = dgvAccounts.Rows[e.RowIndex].Cells["YEAR"].Value.ToString();
+            cmbYearlevel.Text = dgvAccounts.Rows[e.RowIndex].Cells["YEAR"].Value.ToString();
             cmbCourse.Text = dgvAccounts.Rows[e.RowIndex].Cells["COURSE"].Value.ToString();
             txtContactnumber.Text = dgvAccounts.Rows[e.RowIndex].Cells["CONTACT NUMBER"].Value.ToString();
             txtEmail.Text = dgvAccounts.Rows[e.RowIndex].Cells["EMAIL"].Value.ToString();
@@ -106,7 +97,7 @@ namespace E_Library.Admin
         {
             Hide();
             Show();
-            tcAccounts.SelectedIndex =  0;
+            tcAccounts.SelectedIndex = 0;
         }
     }
 }
