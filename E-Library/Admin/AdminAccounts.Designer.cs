@@ -1,6 +1,6 @@
 ﻿namespace E_Library.Admin
 {
-    partial class AdminBook
+    partial class AdminAccounts
     {
         /// <summary>
         /// Required designer variable.
@@ -32,12 +32,11 @@
             this.tcAccounts = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            this.btn = new Krypton.Toolkit.KryptonButton();
-            this.btnBooks = new Krypton.Toolkit.KryptonButton();
-            this.btnAccounts = new Krypton.Toolkit.KryptonButton();
-            this.btnLogout = new Krypton.Toolkit.KryptonButton();
-            this.btnDashboard = new Krypton.Toolkit.KryptonButton();
+            this.cmbRole = new Krypton.Toolkit.KryptonComboBox();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.btnUpdate = new Krypton.Toolkit.KryptonButton();
+            this.btnDelete = new Krypton.Toolkit.KryptonButton();
+            this.btnRegister = new Krypton.Toolkit.KryptonButton();
             this.cmbCourse = new Krypton.Toolkit.KryptonComboBox();
             this.cmbYearlevel = new Krypton.Toolkit.KryptonComboBox();
             this.cmbGender = new Krypton.Toolkit.KryptonComboBox();
@@ -56,21 +55,22 @@
             this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.txtIdnumber = new Krypton.Toolkit.KryptonTextBox();
-            this.btnRegister = new Krypton.Toolkit.KryptonButton();
-            this.btnDelete = new Krypton.Toolkit.KryptonButton();
-            this.btnUpdate = new Krypton.Toolkit.KryptonButton();
-            this.cmbRole = new Krypton.Toolkit.KryptonComboBox();
-            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
+            this.btn = new Krypton.Toolkit.KryptonButton();
+            this.btnBooks = new Krypton.Toolkit.KryptonButton();
+            this.btnAccounts = new Krypton.Toolkit.KryptonButton();
+            this.btnLogout = new Krypton.Toolkit.KryptonButton();
+            this.btnDashboard = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).BeginInit();
             this.tcAccounts.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
-            this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbRole)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbYearlevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGender)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
+            this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAccounts
@@ -135,57 +135,54 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // kryptonPanel1
+            // cmbRole
             // 
-            this.kryptonPanel1.Controls.Add(this.btn);
-            this.kryptonPanel1.Controls.Add(this.btnBooks);
-            this.kryptonPanel1.Controls.Add(this.btnAccounts);
-            this.kryptonPanel1.Controls.Add(this.btnLogout);
-            this.kryptonPanel1.Controls.Add(this.btnDashboard);
-            this.kryptonPanel1.Location = new System.Drawing.Point(23, 26);
-            this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(167, 561);
-            this.kryptonPanel1.TabIndex = 6;
+            this.cmbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cmbRole.DropDownWidth = 121;
+            this.cmbRole.IntegralHeight = false;
+            this.cmbRole.Items.AddRange(new object[] {
+            "ADMIN",
+            "STUDENT"});
+            this.cmbRole.Location = new System.Drawing.Point(207, 53);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(121, 21);
+            this.cmbRole.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.cmbRole.TabIndex = 48;
             // 
-            // btn
+            // kryptonLabel1
             // 
-            this.btn.Location = new System.Drawing.Point(20, 395);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(120, 52);
-            this.btn.TabIndex = 4;
-            this.btn.Values.Text = "Books";
+            this.kryptonLabel1.Location = new System.Drawing.Point(57, 54);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(35, 20);
+            this.kryptonLabel1.TabIndex = 47;
+            this.kryptonLabel1.Values.Text = "Role";
             // 
-            // btnBooks
+            // btnUpdate
             // 
-            this.btnBooks.Location = new System.Drawing.Point(20, 322);
-            this.btnBooks.Name = "btnBooks";
-            this.btnBooks.Size = new System.Drawing.Size(120, 52);
-            this.btnBooks.TabIndex = 3;
-            this.btnBooks.Values.Text = "Books";
+            this.btnUpdate.Location = new System.Drawing.Point(324, 397);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(90, 25);
+            this.btnUpdate.TabIndex = 46;
+            this.btnUpdate.Values.Text = "Update";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnAccounts
+            // btnDelete
             // 
-            this.btnAccounts.Location = new System.Drawing.Point(20, 249);
-            this.btnAccounts.Name = "btnAccounts";
-            this.btnAccounts.Size = new System.Drawing.Size(120, 52);
-            this.btnAccounts.TabIndex = 2;
-            this.btnAccounts.Values.Text = "Accounts";
+            this.btnDelete.Location = new System.Drawing.Point(427, 397);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(90, 25);
+            this.btnDelete.TabIndex = 45;
+            this.btnDelete.Values.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnLogout
+            // btnRegister
             // 
-            this.btnLogout.Location = new System.Drawing.Point(20, 468);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(120, 52);
-            this.btnLogout.TabIndex = 1;
-            this.btnLogout.Values.Text = "Logout";
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Location = new System.Drawing.Point(20, 176);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(120, 52);
-            this.btnDashboard.TabIndex = 0;
-            this.btnDashboard.Values.Text = "Home";
+            this.btnRegister.Location = new System.Drawing.Point(207, 397);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(90, 25);
+            this.btnRegister.TabIndex = 44;
+            this.btnRegister.Values.Text = "Register";
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // cmbCourse
             // 
@@ -349,63 +346,67 @@
             this.txtIdnumber.Size = new System.Drawing.Size(100, 23);
             this.txtIdnumber.TabIndex = 26;
             // 
-            // btnRegister
+            // kryptonPanel1
             // 
-            this.btnRegister.Location = new System.Drawing.Point(207, 397);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(90, 25);
-            this.btnRegister.TabIndex = 44;
-            this.btnRegister.Values.Text = "Register";
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.kryptonPanel1.Controls.Add(this.btn);
+            this.kryptonPanel1.Controls.Add(this.btnBooks);
+            this.kryptonPanel1.Controls.Add(this.btnAccounts);
+            this.kryptonPanel1.Controls.Add(this.btnLogout);
+            this.kryptonPanel1.Controls.Add(this.btnDashboard);
+            this.kryptonPanel1.Location = new System.Drawing.Point(23, 26);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.Size = new System.Drawing.Size(167, 561);
+            this.kryptonPanel1.TabIndex = 6;
             // 
-            // btnDelete
+            // btn
             // 
-            this.btnDelete.Location = new System.Drawing.Point(427, 397);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(90, 25);
-            this.btnDelete.TabIndex = 45;
-            this.btnDelete.Values.Text = "Delete";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btn.Location = new System.Drawing.Point(20, 395);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(120, 52);
+            this.btn.TabIndex = 4;
+            this.btn.Values.Text = "Books";
             // 
-            // btnUpdate
+            // btnBooks
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(324, 397);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(90, 25);
-            this.btnUpdate.TabIndex = 46;
-            this.btnUpdate.Values.Text = "Update";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnBooks.Location = new System.Drawing.Point(20, 322);
+            this.btnBooks.Name = "btnBooks";
+            this.btnBooks.Size = new System.Drawing.Size(120, 52);
+            this.btnBooks.TabIndex = 3;
+            this.btnBooks.Values.Text = "Books";
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
-            // cmbRole
+            // btnAccounts
             // 
-            this.cmbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cmbRole.DropDownWidth = 121;
-            this.cmbRole.IntegralHeight = false;
-            this.cmbRole.Items.AddRange(new object[] {
-            "ADMIN",
-            "STUDENT"});
-            this.cmbRole.Location = new System.Drawing.Point(207, 53);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(121, 21);
-            this.cmbRole.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.cmbRole.TabIndex = 48;
+            this.btnAccounts.Location = new System.Drawing.Point(20, 249);
+            this.btnAccounts.Name = "btnAccounts";
+            this.btnAccounts.Size = new System.Drawing.Size(120, 52);
+            this.btnAccounts.TabIndex = 2;
+            this.btnAccounts.Values.Text = "Accounts";
             // 
-            // kryptonLabel1
+            // btnLogout
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(57, 54);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(35, 20);
-            this.kryptonLabel1.TabIndex = 47;
-            this.kryptonLabel1.Values.Text = "Role";
+            this.btnLogout.Location = new System.Drawing.Point(20, 468);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(120, 52);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Values.Text = "Logout";
             // 
-            // AdminAccount
+            // btnDashboard
+            // 
+            this.btnDashboard.Location = new System.Drawing.Point(20, 176);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(120, 52);
+            this.btnDashboard.TabIndex = 0;
+            this.btnDashboard.Values.Text = "Home";
+            // 
+            // AdminAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 628);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.tcAccounts);
-            this.Name = "AdminAccount";
+            this.Name = "AdminAccounts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminAccount";
             this.Load += new System.EventHandler(this.AdminAccount_Load);
@@ -414,12 +415,12 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
-            this.kryptonPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbRole)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCourse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbYearlevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGender)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
+            this.kryptonPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

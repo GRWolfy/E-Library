@@ -65,6 +65,7 @@
             this.btnBooks.Size = new System.Drawing.Size(120, 52);
             this.btnBooks.TabIndex = 3;
             this.btnBooks.Values.Text = "Books";
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
             // btnAccounts
             // 

@@ -14,8 +14,15 @@
 
         private void btnAccounts_Click(object sender, EventArgs e)
         {
-            var account = new AdminAccount();
+            var account = new AdminAccounts();
             account.Show();
+            Hide();
+        }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            var books = new AdminBooks();
+            books.Show();
             Hide();
         }
     }

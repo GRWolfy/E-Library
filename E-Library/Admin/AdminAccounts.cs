@@ -2,10 +2,10 @@
 
 namespace E_Library.Admin
 {
-    public partial class AdminBook : Form
+    public partial class AdminAccounts : Form
     {
         private int id;
-        public AdminBook()
+        public AdminAccounts()
         {
             InitializeComponent();
         }
@@ -98,6 +98,13 @@ namespace E_Library.Admin
             Hide();
             Show();
             tcAccounts.SelectedIndex = 0;
+        }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            var books = new AdminBooks();
+            books.Show();
+            Hide();
         }
     }
 }
