@@ -17,17 +17,18 @@ namespace E_Library.User_Admission
         private void btnRegister_Click(object sender, EventArgs e)
         {
             Connection.DB();
-            Function.gen = "INSERT INTO userinformation(role, idnumber, firstname, lastname, gender, year, course, contactnumber, email, address) " +
-                "VALUES('" + "STUDENT" + "', " +
-                "'" + txtIdnumber.Text + "', " +
+            Function.gen = "INSERT INTO users(idnumber, role, firstname, lastname, gender, yearlevel, course, email, address, contactnumber, password) " +
+                "VALUES('" + txtIdnumber.Text + "', " +
+                "'" + "STUDENT" + "', " +
                 "'" + txtFirstname.Text + "', " +
                 "'" + txtLastname.Text + "', " +
                 "'" + cmbGender.Text + "', " +
                 "'" + cmbYearlevel.Text + "', " +
                 "'" + cmbCourse.Text + "', " +
-                "'" + txtContactnumber.Text + "', " +
                 "'" + txtEmail.Text + "', " +
-                "'" + txtAddress.Text + "')";
+                "'" + txtAddress.Text + "', " +
+                "'" + txtContactnumber.Text + "', " +
+                "'" + txtPassword.Text + "')";
             Function.command = new SqlCommand(Function.gen, Connection.con);
             Function.command.ExecuteNonQuery();
             MessageBox.Show("Registration success.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);

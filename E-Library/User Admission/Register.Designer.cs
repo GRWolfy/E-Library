@@ -47,6 +47,10 @@
             this.cmbGender = new Krypton.Toolkit.KryptonComboBox();
             this.cmbYearlevel = new Krypton.Toolkit.KryptonComboBox();
             this.cmbCourse = new Krypton.Toolkit.KryptonComboBox();
+            this.txtPassword = new Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.txtConfirmpassword = new Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbYearlevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCourse)).BeginInit();
@@ -54,14 +58,14 @@
             // 
             // txtIdnumber
             // 
-            this.txtIdnumber.Location = new System.Drawing.Point(219, 89);
+            this.txtIdnumber.Location = new System.Drawing.Point(203, 28);
             this.txtIdnumber.Name = "txtIdnumber";
             this.txtIdnumber.Size = new System.Drawing.Size(100, 23);
             this.txtIdnumber.TabIndex = 2;
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(50, 89);
+            this.kryptonLabel2.Location = new System.Drawing.Point(34, 28);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(67, 20);
             this.kryptonLabel2.TabIndex = 4;
@@ -69,7 +73,7 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(50, 133);
+            this.kryptonLabel3.Location = new System.Drawing.Point(34, 72);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(67, 20);
             this.kryptonLabel3.TabIndex = 5;
@@ -77,7 +81,7 @@
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(50, 185);
+            this.kryptonLabel4.Location = new System.Drawing.Point(34, 124);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(66, 20);
             this.kryptonLabel4.TabIndex = 6;
@@ -85,7 +89,7 @@
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(40, 229);
+            this.kryptonLabel5.Location = new System.Drawing.Point(24, 168);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.Size = new System.Drawing.Size(50, 20);
             this.kryptonLabel5.TabIndex = 7;
@@ -93,7 +97,7 @@
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(39, 271);
+            this.kryptonLabel6.Location = new System.Drawing.Point(494, 34);
             this.kryptonLabel6.Name = "kryptonLabel6";
             this.kryptonLabel6.Size = new System.Drawing.Size(54, 20);
             this.kryptonLabel6.TabIndex = 12;
@@ -101,7 +105,7 @@
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(462, 232);
+            this.kryptonLabel7.Location = new System.Drawing.Point(445, 222);
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.Size = new System.Drawing.Size(40, 20);
             this.kryptonLabel7.TabIndex = 11;
@@ -109,7 +113,7 @@
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(462, 180);
+            this.kryptonLabel8.Location = new System.Drawing.Point(445, 170);
             this.kryptonLabel8.Name = "kryptonLabel8";
             this.kryptonLabel8.Size = new System.Drawing.Size(73, 20);
             this.kryptonLabel8.TabIndex = 10;
@@ -117,7 +121,7 @@
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(462, 136);
+            this.kryptonLabel9.Location = new System.Drawing.Point(445, 126);
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.Size = new System.Drawing.Size(48, 20);
             this.kryptonLabel9.TabIndex = 9;
@@ -125,7 +129,7 @@
             // 
             // kryptonLabel10
             // 
-            this.kryptonLabel10.Location = new System.Drawing.Point(462, 91);
+            this.kryptonLabel10.Location = new System.Drawing.Point(445, 81);
             this.kryptonLabel10.Name = "kryptonLabel10";
             this.kryptonLabel10.Size = new System.Drawing.Size(63, 20);
             this.kryptonLabel10.TabIndex = 8;
@@ -133,28 +137,28 @@
             // 
             // txtFirstname
             // 
-            this.txtFirstname.Location = new System.Drawing.Point(209, 133);
+            this.txtFirstname.Location = new System.Drawing.Point(193, 72);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(100, 23);
             this.txtFirstname.TabIndex = 13;
             // 
             // txtContactnumber
             // 
-            this.txtContactnumber.Location = new System.Drawing.Point(559, 177);
+            this.txtContactnumber.Location = new System.Drawing.Point(542, 167);
             this.txtContactnumber.Name = "txtContactnumber";
             this.txtContactnumber.Size = new System.Drawing.Size(131, 23);
             this.txtContactnumber.TabIndex = 18;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(556, 232);
+            this.txtEmail.Location = new System.Drawing.Point(539, 222);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(131, 23);
             this.txtEmail.TabIndex = 19;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(145, 271);
+            this.txtAddress.Location = new System.Drawing.Point(600, 34);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(131, 23);
             this.txtAddress.TabIndex = 20;
@@ -170,7 +174,7 @@
             // 
             // txtLastname
             // 
-            this.txtLastname.Location = new System.Drawing.Point(200, 177);
+            this.txtLastname.Location = new System.Drawing.Point(184, 116);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(100, 23);
             this.txtLastname.TabIndex = 22;
@@ -184,7 +188,7 @@
             "Male",
             "Female",
             "Other"});
-            this.cmbGender.Location = new System.Drawing.Point(188, 228);
+            this.cmbGender.Location = new System.Drawing.Point(172, 167);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(121, 21);
             this.cmbGender.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -200,7 +204,7 @@
             "2nd year",
             "3rd year",
             "4th year"});
-            this.cmbYearlevel.Location = new System.Drawing.Point(556, 88);
+            this.cmbYearlevel.Location = new System.Drawing.Point(539, 78);
             this.cmbYearlevel.Name = "cmbYearlevel";
             this.cmbYearlevel.Size = new System.Drawing.Size(121, 21);
             this.cmbYearlevel.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -217,17 +221,51 @@
             "BSED",
             "BEED",
             "BSN"});
-            this.cmbCourse.Location = new System.Drawing.Point(556, 132);
+            this.cmbCourse.Location = new System.Drawing.Point(539, 122);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(121, 21);
             this.cmbCourse.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.cmbCourse.TabIndex = 25;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(183, 222);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(100, 23);
+            this.txtPassword.TabIndex = 27;
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(24, 222);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(62, 20);
+            this.kryptonLabel1.TabIndex = 26;
+            this.kryptonLabel1.Values.Text = "Password";
+            // 
+            // txtConfirmpassword
+            // 
+            this.txtConfirmpassword.Location = new System.Drawing.Point(183, 269);
+            this.txtConfirmpassword.Name = "txtConfirmpassword";
+            this.txtConfirmpassword.Size = new System.Drawing.Size(100, 23);
+            this.txtConfirmpassword.TabIndex = 29;
+            // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Location = new System.Drawing.Point(24, 269);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(109, 20);
+            this.kryptonLabel11.TabIndex = 28;
+            this.kryptonLabel11.Values.Text = "Confirm password";
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtConfirmpassword);
+            this.Controls.Add(this.kryptonLabel11);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.cmbCourse);
             this.Controls.Add(this.cmbYearlevel);
             this.Controls.Add(this.cmbGender);
@@ -278,5 +316,9 @@
         private Krypton.Toolkit.KryptonComboBox cmbYearlevel;
         private Krypton.Toolkit.KryptonComboBox cmbCourse;
         private Krypton.Toolkit.KryptonComboBox cmbGender;
+        private Krypton.Toolkit.KryptonTextBox txtPassword;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonTextBox txtConfirmpassword;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel11;
     }
 }

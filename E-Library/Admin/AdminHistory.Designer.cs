@@ -1,7 +1,6 @@
-﻿
-namespace E_Library.Admin
+﻿namespace E_Library.Admin
 {
-    partial class AdminBooks
+    partial class AdminHistory
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +36,7 @@ namespace E_Library.Admin
             this.btnDashboard = new Krypton.Toolkit.KryptonButton();
             this.tcAccounts = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgvBooks = new Krypton.Toolkit.KryptonDataGridView();
+            this.dgvHistory = new Krypton.Toolkit.KryptonDataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnUpdate = new Krypton.Toolkit.KryptonButton();
             this.btnDelete = new Krypton.Toolkit.KryptonButton();
@@ -50,7 +49,7 @@ namespace E_Library.Admin
             this.kryptonPanel1.SuspendLayout();
             this.tcAccounts.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +63,7 @@ namespace E_Library.Admin
             this.kryptonPanel1.Location = new System.Drawing.Point(17, 27);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(167, 561);
-            this.kryptonPanel1.TabIndex = 8;
+            this.kryptonPanel1.TabIndex = 10;
             // 
             // btnHistory
             // 
@@ -81,6 +80,7 @@ namespace E_Library.Admin
             this.btnBooks.Size = new System.Drawing.Size(120, 52);
             this.btnBooks.TabIndex = 3;
             this.btnBooks.Values.Text = "Books";
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
             // btnAccounts
             // 
@@ -98,6 +98,7 @@ namespace E_Library.Admin
             this.btnLogout.Size = new System.Drawing.Size(120, 52);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Values.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnDashboard
             // 
@@ -116,11 +117,11 @@ namespace E_Library.Admin
             this.tcAccounts.Name = "tcAccounts";
             this.tcAccounts.SelectedIndex = 0;
             this.tcAccounts.Size = new System.Drawing.Size(770, 549);
-            this.tcAccounts.TabIndex = 7;
+            this.tcAccounts.TabIndex = 9;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dgvBooks);
+            this.tabPage1.Controls.Add(this.dgvHistory);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -129,13 +130,12 @@ namespace E_Library.Admin
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dgvBooks
+            // dgvHistory
             // 
-            this.dgvBooks.Location = new System.Drawing.Point(27, 61);
-            this.dgvBooks.Name = "dgvBooks";
-            this.dgvBooks.Size = new System.Drawing.Size(720, 450);
-            this.dgvBooks.TabIndex = 2;
-            this.dgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
+            this.dgvHistory.Location = new System.Drawing.Point(27, 61);
+            this.dgvHistory.Name = "dgvHistory";
+            this.dgvHistory.Size = new System.Drawing.Size(720, 450);
+            this.dgvHistory.TabIndex = 2;
             // 
             // tabPage2
             // 
@@ -161,7 +161,6 @@ namespace E_Library.Admin
             this.btnUpdate.Size = new System.Drawing.Size(90, 25);
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Values.Text = "Update";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -170,7 +169,6 @@ namespace E_Library.Admin
             this.btnDelete.Size = new System.Drawing.Size(90, 25);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Values.Text = "Delete";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtBookauthor
             // 
@@ -181,7 +179,7 @@ namespace E_Library.Admin
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(87, 180);
+            this.kryptonLabel2.Location = new System.Drawing.Point(90, 183);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(78, 20);
             this.kryptonLabel2.TabIndex = 3;
@@ -201,32 +199,31 @@ namespace E_Library.Admin
             this.btnSave.Size = new System.Drawing.Size(90, 25);
             this.btnSave.TabIndex = 1;
             this.btnSave.Values.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(87, 106);
+            this.kryptonLabel1.Location = new System.Drawing.Point(90, 109);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(72, 20);
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Book name";
             // 
-            // AdminBooks
+            // AdminHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 628);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.tcAccounts);
-            this.Name = "AdminBooks";
+            this.Name = "AdminHistory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminBooks";
-            this.Load += new System.EventHandler(this.AdminBooks_Load);
+            this.Text = "AdminHistory";
+            this.Load += new System.EventHandler(this.AdminHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.tcAccounts.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -243,7 +240,7 @@ namespace E_Library.Admin
         private Krypton.Toolkit.KryptonButton btnDashboard;
         private TabControl tcAccounts;
         private TabPage tabPage1;
-        private Krypton.Toolkit.KryptonDataGridView dgvBooks;
+        private Krypton.Toolkit.KryptonDataGridView dgvHistory;
         private TabPage tabPage2;
         private Krypton.Toolkit.KryptonButton btnUpdate;
         private Krypton.Toolkit.KryptonButton btnDelete;

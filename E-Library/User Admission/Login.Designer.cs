@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.btnLogin = new Krypton.Toolkit.KryptonButton();
-            this.txtEmail = new Krypton.Toolkit.KryptonMaskedTextBox();
+            this.txtIdnumber = new Krypton.Toolkit.KryptonMaskedTextBox();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
-            this.txtIdnumber = new Krypton.Toolkit.KryptonMaskedTextBox();
+            this.txtPassword = new Krypton.Toolkit.KryptonMaskedTextBox();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -44,35 +44,35 @@
             this.btnLogin.Values.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // txtEmail
+            // txtIdnumber
             // 
-            this.txtEmail.Location = new System.Drawing.Point(392, 125);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 23);
-            this.txtEmail.TabIndex = 1;
+            this.txtIdnumber.Location = new System.Drawing.Point(392, 125);
+            this.txtIdnumber.Name = "txtIdnumber";
+            this.txtIdnumber.Size = new System.Drawing.Size(100, 23);
+            this.txtIdnumber.TabIndex = 1;
             // 
             // kryptonLabel1
             // 
             this.kryptonLabel1.Location = new System.Drawing.Point(245, 125);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(40, 20);
+            this.kryptonLabel1.Size = new System.Drawing.Size(67, 20);
             this.kryptonLabel1.TabIndex = 2;
-            this.kryptonLabel1.Values.Text = "Email";
+            this.kryptonLabel1.Values.Text = "Id number";
             // 
             // kryptonLabel2
             // 
             this.kryptonLabel2.Location = new System.Drawing.Point(245, 180);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(67, 20);
+            this.kryptonLabel2.Size = new System.Drawing.Size(62, 20);
             this.kryptonLabel2.TabIndex = 4;
-            this.kryptonLabel2.Values.Text = "Id number";
+            this.kryptonLabel2.Values.Text = "Password";
             // 
-            // txtIdnumber
+            // txtPassword
             // 
-            this.txtIdnumber.Location = new System.Drawing.Point(392, 180);
-            this.txtIdnumber.Name = "txtIdnumber";
-            this.txtIdnumber.Size = new System.Drawing.Size(100, 23);
-            this.txtIdnumber.TabIndex = 3;
+            this.txtPassword.Location = new System.Drawing.Point(392, 180);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(100, 23);
+            this.txtPassword.TabIndex = 3;
             // 
             // Login
             // 
@@ -80,9 +80,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.kryptonLabel2);
-            this.Controls.Add(this.txtIdnumber);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.kryptonLabel1);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtIdnumber);
             this.Controls.Add(this.btnLogin);
             this.Name = "Login";
             this.Text = "Login";
@@ -95,9 +95,9 @@
         #endregion
 
         private Krypton.Toolkit.KryptonButton btnLogin;
-        private Krypton.Toolkit.KryptonMaskedTextBox txtEmail;
+        private Krypton.Toolkit.KryptonMaskedTextBox txtIdnumber;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
-        private Krypton.Toolkit.KryptonMaskedTextBox txtIdnumber;
+        private Krypton.Toolkit.KryptonMaskedTextBox txtPassword;
     }
 }

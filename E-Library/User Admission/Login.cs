@@ -28,7 +28,7 @@ namespace E_Library.User_Admission
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Connection.DB();
-            Function.gen = "SELECT * FROM userinformation WHERE email = '" + txtEmail.Text + "' AND idnumber = '" + txtIdnumber.Text + "' ";
+            Function.gen = "SELECT * FROM users WHERE idnumber = '" + txtIdnumber.Text + "' AND password = '" + txtPassword.Text + "' ";
             Function.command = new SqlCommand(Function.gen, Connection.con);
             Function.reader = Function.command.ExecuteReader();
 
@@ -52,7 +52,7 @@ namespace E_Library.User_Admission
             }
             else
             {
-                MessageBox.Show("Incorrect email or idnumber", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Incorrect idnumber or password", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

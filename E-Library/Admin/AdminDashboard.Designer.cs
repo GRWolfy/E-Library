@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            this.btn = new Krypton.Toolkit.KryptonButton();
+            this.btnHistory = new Krypton.Toolkit.KryptonButton();
             this.btnBooks = new Krypton.Toolkit.KryptonButton();
             this.btnAccounts = new Krypton.Toolkit.KryptonButton();
             this.btnLogout = new Krypton.Toolkit.KryptonButton();
@@ -40,7 +40,7 @@
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.btn);
+            this.kryptonPanel1.Controls.Add(this.btnHistory);
             this.kryptonPanel1.Controls.Add(this.btnBooks);
             this.kryptonPanel1.Controls.Add(this.btnAccounts);
             this.kryptonPanel1.Controls.Add(this.btnLogout);
@@ -50,13 +50,13 @@
             this.kryptonPanel1.Size = new System.Drawing.Size(167, 561);
             this.kryptonPanel1.TabIndex = 2;
             // 
-            // btn
+            // btnHistory
             // 
-            this.btn.Location = new System.Drawing.Point(20, 395);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(120, 52);
-            this.btn.TabIndex = 4;
-            this.btn.Values.Text = "Books";
+            this.btnHistory.Location = new System.Drawing.Point(20, 395);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(120, 52);
+            this.btnHistory.TabIndex = 4;
+            this.btnHistory.Values.Text = "History";
             // 
             // btnBooks
             // 
@@ -114,7 +114,7 @@
         private Krypton.Toolkit.KryptonButton btnLogout;
         private Krypton.Toolkit.KryptonButton btnDashboard;
         private Krypton.Toolkit.KryptonButton btnAccounts;
-        private Krypton.Toolkit.KryptonButton btn;
+        private Krypton.Toolkit.KryptonButton btnHistory;
         private Krypton.Toolkit.KryptonButton btnBooks;
     }
 }

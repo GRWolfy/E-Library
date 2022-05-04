@@ -4,7 +4,6 @@ namespace E_Library.Admin
 {
     public partial class AdminAccounts : Form
     {
-        private int id;
         public AdminAccounts()
         {
             InitializeComponent();
@@ -18,26 +17,27 @@ namespace E_Library.Admin
         private void viewUserinformation()
         {
             Connection.DB();
-            Function.gen = "SELECT id, picture, role AS ROLE, idnumber AS [ID NUMBER], firstname AS [FIRST NAME], lastname AS [LAST NAME], gender AS GENDER, year AS YEAR, course AS COURSE, contactnumber as [CONTACT NUMBER], email as EMAIL, address as ADDRESS FROM userinformation";
+            Function.gen = "SELECT picture, password, role AS ROLE, idnumber AS [ID NUMBER], firstname AS [FIRST NAME], lastname AS [LAST NAME], gender AS GENDER, yearlevel AS [YEAR LEVEL], course AS COURSE, contactnumber as [CONTACT NUMBER], email as EMAIL, address as ADDRESS FROM users";
             Function.fill(Function.gen, dgvAccounts);
             dgvAccounts.Columns["picture"].Visible = false;
-            dgvAccounts.Columns["id"].Visible = false;
+            dgvAccounts.Columns["password"].Visible = false;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
             Connection.DB();
-            Function.gen = "INSERT INTO userinformation(role, idnumber, firstname, lastname, gender, year, course, contactnumber, email, address) " +
-                "VALUES('" + cmbRole.Text + "', " +
-                "'" + txtIdnumber.Text + "', " +
+            Function.gen = "INSERT INTO users(idnumber, role, firstname, lastname, gender, yearlevel, course, email, address, contactnumber, password) " +
+                "VALUES('" + txtIdnumber.Text + "', " +
+                "'" + cmbRole.Text + "', " +
                 "'" + txtFirstname.Text + "', " +
                 "'" + txtLastname.Text + "', " +
                 "'" + cmbGender.Text + "', " +
                 "'" + cmbYearlevel.Text + "', " +
                 "'" + cmbCourse.Text + "', " +
-                "'" + txtContactnumber.Text + "', " +
                 "'" + txtEmail.Text + "', " +
-                "'" + txtAddress.Text + "')";
+                "'" + txtAddress.Text + "', " +
+                "'" + txtContactnumber.Text + "', " +
+                "'" + txtPassword.Text + "')";
             Function.command = new SqlCommand(Function.gen, Connection.con);
             Function.command.ExecuteNonQuery();
             MessageBox.Show("Registration success.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -47,16 +47,17 @@ namespace E_Library.Admin
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             Connection.DB();
-            Function.gen = "UPDATE userinformation SET idnumber = '" + txtIdnumber.Text + "', " +
+            Function.gen = "UPDATE users SET role = '" + cmbRole.Text + "', " +
                 "firstname = '" + txtFirstname.Text + "', " +
                 "lastname = '" + txtLastname.Text + "', " +
                 "gender = '" + cmbGender.Text + "', " +
-                "year = '" + cmbYearlevel.Text + "', " +
+                "yearlevel = '" + cmbYearlevel.Text + "', " +
                 "course = '" + cmbCourse.Text + "', " +
                 "contactnumber = '" + txtContactnumber.Text + "', " +
                 "email = '" + txtEmail.Text + "', " +
-                "address = '" + txtAddress.Text + "' " +
-                "WHERE id = '" + id + "' ";
+                "address = '" + txtAddress.Text + "', " +
+                "password = '" + txtPassword.Text + "' " +
+                "WHERE idnumber = '" + txtIdnumber.Text + "' ";
             Function.command = new SqlCommand(Function.gen, Connection.con);
             Function.command.ExecuteNonQuery();
             MessageBox.Show("Update success.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -70,7 +71,7 @@ namespace E_Library.Admin
 
             if (gen == DialogResult.Yes)
             {
-                Function.gen = "DELETE FROM userinformation WHERE id = '" + id + "' ";
+                Function.gen = "DELETE FROM users WHERE idnumber = '" + txtIdnumber.Text + "' ";
                 Function.command = new SqlCommand(Function.gen, Connection.con);
                 Function.command.ExecuteNonQuery();
                 Connection.con.Close();

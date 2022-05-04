@@ -6,5 +6,10 @@
         {
             InitializeComponent();
         }
+
+        private void StudentsProfile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
