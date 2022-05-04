@@ -36,6 +36,7 @@
             this.btnDashboard = new Krypton.Toolkit.KryptonButton();
             this.flBooks = new System.Windows.Forms.FlowLayoutPanel();
             this.txtSearchbook = new Krypton.Toolkit.KryptonTextBox();
+            this.btnCart = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -108,11 +109,21 @@
             this.txtSearchbook.Size = new System.Drawing.Size(100, 23);
             this.txtSearchbook.TabIndex = 13;
             // 
+            // btnCart
+            // 
+            this.btnCart.Location = new System.Drawing.Point(883, 29);
+            this.btnCart.Name = "btnCart";
+            this.btnCart.Size = new System.Drawing.Size(90, 25);
+            this.btnCart.TabIndex = 14;
+            this.btnCart.Values.Text = "Cart";
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
+            // 
             // StudentsBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 628);
+            this.Controls.Add(this.btnCart);
             this.Controls.Add(this.txtSearchbook);
             this.Controls.Add(this.flBooks);
             this.Controls.Add(this.kryptonPanel1);
@@ -137,5 +148,6 @@
         private Krypton.Toolkit.KryptonButton btnDashboard;
         private FlowLayoutPanel flBooks;
         private Krypton.Toolkit.KryptonTextBox txtSearchbook;
+        private Krypton.Toolkit.KryptonButton btnCart;
     }
 }
