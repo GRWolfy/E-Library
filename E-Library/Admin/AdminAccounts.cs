@@ -80,17 +80,17 @@ namespace E_Library.Admin
 
         private void dgvAccounts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = Convert.ToInt32(dgvAccounts.Rows[e.RowIndex].Cells["id"].Value);
             cmbRole.Text = dgvAccounts.Rows[e.RowIndex].Cells["ROLE"].Value.ToString();
             txtIdnumber.Text = dgvAccounts.Rows[e.RowIndex].Cells["ID NUMBER"].Value.ToString();
             txtFirstname.Text = dgvAccounts.Rows[e.RowIndex].Cells["FIRST NAME"].Value.ToString();
             txtLastname.Text = dgvAccounts.Rows[e.RowIndex].Cells["LAST NAME"].Value.ToString();
             cmbGender.Text = dgvAccounts.Rows[e.RowIndex].Cells["GENDER"].Value.ToString();
-            cmbYearlevel.Text = dgvAccounts.Rows[e.RowIndex].Cells["YEAR"].Value.ToString();
+            cmbYearlevel.Text = dgvAccounts.Rows[e.RowIndex].Cells["YEAR LEVEL"].Value.ToString();
             cmbCourse.Text = dgvAccounts.Rows[e.RowIndex].Cells["COURSE"].Value.ToString();
             txtContactnumber.Text = dgvAccounts.Rows[e.RowIndex].Cells["CONTACT NUMBER"].Value.ToString();
             txtEmail.Text = dgvAccounts.Rows[e.RowIndex].Cells["EMAIL"].Value.ToString();
             txtAddress.Text = dgvAccounts.Rows[e.RowIndex].Cells["ADDRESS"].Value.ToString();
+            txtPassword.Text = dgvAccounts.Rows[e.RowIndex].Cells["password"].Value.ToString();
 
         }
 

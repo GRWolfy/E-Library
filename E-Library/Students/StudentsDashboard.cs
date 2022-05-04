@@ -6,5 +6,17 @@
         {
             InitializeComponent();
         }
+
+        private void btnAccounts_Click(object sender, EventArgs e)
+        {
+            new StudentsProfile().Show();
+            Hide();
+        }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            new StudentsBooks().Show();
+            Hide();
+        }
     }
 }

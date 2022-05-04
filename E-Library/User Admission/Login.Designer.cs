@@ -33,6 +33,7 @@
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.txtPassword = new Krypton.Toolkit.KryptonMaskedTextBox();
+            this.hlToRegister = new Krypton.Toolkit.KryptonLinkLabel();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -74,11 +75,21 @@
             this.txtPassword.Size = new System.Drawing.Size(100, 23);
             this.txtPassword.TabIndex = 3;
             // 
+            // hlToRegister
+            // 
+            this.hlToRegister.Location = new System.Drawing.Point(343, 242);
+            this.hlToRegister.Name = "hlToRegister";
+            this.hlToRegister.Size = new System.Drawing.Size(126, 20);
+            this.hlToRegister.TabIndex = 5;
+            this.hlToRegister.Values.Text = "Click here to register.";
+            this.hlToRegister.LinkClicked += new System.EventHandler(this.hlToRegister_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.hlToRegister);
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.kryptonLabel1);
@@ -99,5 +110,6 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private Krypton.Toolkit.KryptonMaskedTextBox txtPassword;
+        private Krypton.Toolkit.KryptonLinkLabel hlToRegister;
     }
 }

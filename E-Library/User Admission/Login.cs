@@ -4,16 +4,8 @@ namespace E_Library.User_Admission
 {
     public partial class Login : Form
     {
-        public static int id;
         public static string role = "";
-        public static string idnumber = "";
-        public static string firstname = "";
-        public static string lastname = "";
-        public static string gender = "";
-        public static string year = "";
-        public static int contactnumner;
-        public static string email = "";
-        public static string address = "";
+        public static int idnumber;
 
         public Login()
         {
@@ -36,6 +28,7 @@ namespace E_Library.User_Admission
             {
                 Function.reader.Read();
                 role = Function.reader["role"].ToString();
+                idnumber = Convert.ToInt32(Function.reader["idnumber"]);
 
                 if (role.Equals("ADMIN"))
                 {
@@ -54,6 +47,12 @@ namespace E_Library.User_Admission
             {
                 MessageBox.Show("Incorrect idnumber or password", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void hlToRegister_LinkClicked(object sender, EventArgs e)
+        {
+            new Register().Show();
+            Hide();
         }
     }
 }

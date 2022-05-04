@@ -39,6 +39,11 @@ namespace E_Library.Admin
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvBooks = new Krypton.Toolkit.KryptonDataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnUpdatepic = new Krypton.Toolkit.KryptonButton();
+            this.btnBrowse = new Krypton.Toolkit.KryptonButton();
+            this.pbBook = new System.Windows.Forms.PictureBox();
+            this.txtBooklocation = new Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
             this.btnUpdate = new Krypton.Toolkit.KryptonButton();
             this.btnDelete = new Krypton.Toolkit.KryptonButton();
             this.txtBookauthor = new Krypton.Toolkit.KryptonTextBox();
@@ -52,6 +57,7 @@ namespace E_Library.Admin
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBook)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -139,6 +145,11 @@ namespace E_Library.Admin
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnUpdatepic);
+            this.tabPage2.Controls.Add(this.btnBrowse);
+            this.tabPage2.Controls.Add(this.pbBook);
+            this.tabPage2.Controls.Add(this.txtBooklocation);
+            this.tabPage2.Controls.Add(this.kryptonLabel3);
             this.tabPage2.Controls.Add(this.btnUpdate);
             this.tabPage2.Controls.Add(this.btnDelete);
             this.tabPage2.Controls.Add(this.txtBookauthor);
@@ -154,9 +165,50 @@ namespace E_Library.Admin
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnUpdatepic
+            // 
+            this.btnUpdatepic.Location = new System.Drawing.Point(445, 59);
+            this.btnUpdatepic.Name = "btnUpdatepic";
+            this.btnUpdatepic.Size = new System.Drawing.Size(90, 25);
+            this.btnUpdatepic.TabIndex = 11;
+            this.btnUpdatepic.Values.Text = "Update";
+            this.btnUpdatepic.Click += new System.EventHandler(this.btnUpdatepic_Click);
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(335, 59);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(90, 25);
+            this.btnBrowse.TabIndex = 10;
+            this.btnBrowse.Values.Text = "Browse";
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // pbBook
+            // 
+            this.pbBook.Location = new System.Drawing.Point(27, 59);
+            this.pbBook.Name = "pbBook";
+            this.pbBook.Size = new System.Drawing.Size(289, 338);
+            this.pbBook.TabIndex = 9;
+            this.pbBook.TabStop = false;
+            // 
+            // txtBooklocation
+            // 
+            this.txtBooklocation.Location = new System.Drawing.Point(507, 257);
+            this.txtBooklocation.Name = "txtBooklocation";
+            this.txtBooklocation.Size = new System.Drawing.Size(100, 23);
+            this.txtBooklocation.TabIndex = 8;
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(363, 260);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(85, 20);
+            this.kryptonLabel3.TabIndex = 7;
+            this.kryptonLabel3.Values.Text = "Book location";
+            // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(241, 460);
+            this.btnUpdate.Location = new System.Drawing.Point(226, 445);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(90, 25);
             this.btnUpdate.TabIndex = 6;
@@ -174,14 +226,14 @@ namespace E_Library.Admin
             // 
             // txtBookauthor
             // 
-            this.txtBookauthor.Location = new System.Drawing.Point(231, 177);
+            this.txtBookauthor.Location = new System.Drawing.Point(507, 206);
             this.txtBookauthor.Name = "txtBookauthor";
             this.txtBookauthor.Size = new System.Drawing.Size(100, 23);
             this.txtBookauthor.TabIndex = 4;
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(87, 180);
+            this.kryptonLabel2.Location = new System.Drawing.Point(363, 209);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(78, 20);
             this.kryptonLabel2.TabIndex = 3;
@@ -189,7 +241,7 @@ namespace E_Library.Admin
             // 
             // txtBookname
             // 
-            this.txtBookname.Location = new System.Drawing.Point(231, 103);
+            this.txtBookname.Location = new System.Drawing.Point(507, 132);
             this.txtBookname.Name = "txtBookname";
             this.txtBookname.Size = new System.Drawing.Size(100, 23);
             this.txtBookname.TabIndex = 2;
@@ -205,7 +257,7 @@ namespace E_Library.Admin
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(87, 106);
+            this.kryptonLabel1.Location = new System.Drawing.Point(363, 135);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(72, 20);
             this.kryptonLabel1.TabIndex = 0;
@@ -229,6 +281,7 @@ namespace E_Library.Admin
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBook)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,5 +305,10 @@ namespace E_Library.Admin
         private Krypton.Toolkit.KryptonTextBox txtBookname;
         private Krypton.Toolkit.KryptonButton btnSave;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonTextBox txtBooklocation;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonButton btnBrowse;
+        private PictureBox pbBook;
+        private Krypton.Toolkit.KryptonButton btnUpdatepic;
     }
 }

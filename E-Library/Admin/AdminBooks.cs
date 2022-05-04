@@ -14,6 +14,7 @@ namespace E_Library.Admin
     public partial class AdminBooks : Form
     {
         private int bookid;
+        private string imagelocation = "";
 
         public AdminBooks()
         {
@@ -40,9 +41,10 @@ namespace E_Library.Admin
         private void viewBooks()
         {
             Connection.DB();
-            Function.gen = "SELECT bookid, bookname AS [BOOK NAME], bookauthor AS [BOOK AUTHOR], availability AS AVAILABILITY FROM books";
+            Function.gen = "SELECT picture, bookid, bookname AS [NAME], bookauthor AS [AUTHOR], booklocation as [LOCATION], availability AS AVAILABILITY FROM books";
             Function.fill(Function.gen, dgvBooks);
             dgvBooks.Columns["bookid"].Visible = false;
+            dgvBooks.Columns["picture"].Visible = false;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -63,16 +65,30 @@ namespace E_Library.Admin
         private void dgvBooks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             bookid = Convert.ToInt32(dgvBooks.Rows[e.RowIndex].Cells["bookid"].Value);
-            txtBookname.Text = dgvBooks.Rows[e.RowIndex].Cells["BOOK NAME"].Value.ToString();
-            txtBookauthor.Text = dgvBooks.Rows[e.RowIndex].Cells["BOOK AUTHOR"].Value.ToString();
+            txtBookname.Text = dgvBooks.Rows[e.RowIndex].Cells["NAME"].Value.ToString();
+            txtBookauthor.Text = dgvBooks.Rows[e.RowIndex].Cells["AUTHOR"].Value.ToString();
+            txtBooklocation.Text = dgvBooks.Rows[e.RowIndex].Cells["LOCATION"].Value.ToString();
+            byte[] img = (byte[])(dgvBooks.Rows[e.RowIndex].Cells["picture"].Value);
+
+            if (img == null)
+            {
+                pbBook.Image = null;
+            }
+            else
+            {
+                MemoryStream ms = new MemoryStream(img);
+                pbBook.Image = Image.FromStream(ms);
+            }
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             Connection.DB();
-            Function.gen = "INSERT INTO books(bookname, bookauthor, availability)" +
+            Function.gen = "INSERT INTO books(bookname, bookauthor, booklocation, availability)" +
                 "VALUES('" + txtBookname.Text + "', " +
                 "'" + txtBookauthor.Text + "', " +
+                "'" + txtBooklocation.Text + "', " +
                 "'" + "AVAILABLE" + "') ";
             Function.command = new SqlCommand(Function.gen, Connection.con);
             Function.command.ExecuteNonQuery();
@@ -87,6 +103,44 @@ namespace E_Library.Admin
                 "bookauthor = '" + txtBookauthor.Text + "' " +
                 "WHERE bookid = '" + bookid + "' ";
             Function.command = new SqlCommand(Function.gen, Connection.con);
+            Function.command.ExecuteNonQuery();
+            MessageBox.Show("Update success.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Connection.con.Close();
+        }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif|PNG Files (*.png)|*.png| All Files (*.*)|*.*";
+            dlg.Title = "Select Product Picture";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                imagelocation = dlg.FileName.ToString();
+                pbBook.ImageLocation = imagelocation;
+            }
+        }
+
+        private void btnUpdatepic_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif|PNG Files (*.png)|*.png| All Files (*.*)|*.*";
+            dlg.Title = "Select Product Picture";
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                imagelocation = dlg.FileName.ToString();
+                pbBook.ImageLocation = imagelocation;
+            }
+
+            byte[] img = null;
+            FileStream fs = new FileStream(imagelocation, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            img = br.ReadBytes((int)fs.Length);
+
+            Connection.DB();
+            Function.gen = "UPDATE books SET picture = @img WHERE bookid = '" + bookid + "' ";
+            Function.command = new SqlCommand(Function.gen, Connection.con);
+            Function.command.Parameters.Add(new SqlParameter("@img", img));
             Function.command.ExecuteNonQuery();
             MessageBox.Show("Update success.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Connection.con.Close();
