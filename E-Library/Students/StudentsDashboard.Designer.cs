@@ -57,6 +57,7 @@
             this.btnHistory.Size = new System.Drawing.Size(120, 52);
             this.btnHistory.TabIndex = 4;
             this.btnHistory.Values.Text = "History";
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // btnBooks
             // 

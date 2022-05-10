@@ -26,6 +26,7 @@ namespace E_Library.Students
             if (Function.reader.HasRows)
             {
                 Function.reader.Read();
+                txtIdnumber.Text = Function.reader["idnumber"].ToString();
                 txtFirstname.Text = Function.reader["firstname"].ToString();
                 txtLastname.Text = Function.reader["lastname"].ToString();
                 cmbGender.Text = Function.reader["gender"].ToString();

@@ -18,5 +18,11 @@
             new StudentsBooks().Show();
             Hide();
         }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            new StudentsReturn().Show();
+            Hide();
+        }
     }
 }

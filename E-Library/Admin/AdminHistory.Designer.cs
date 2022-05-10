@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            this.btnHistory = new Krypton.Toolkit.KryptonButton();
+            this.btnLogs = new Krypton.Toolkit.KryptonButton();
             this.btnBooks = new Krypton.Toolkit.KryptonButton();
             this.btnAccounts = new Krypton.Toolkit.KryptonButton();
             this.btnLogout = new Krypton.Toolkit.KryptonButton();
             this.btnDashboard = new Krypton.Toolkit.KryptonButton();
             this.tcAccounts = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgvHistory = new Krypton.Toolkit.KryptonDataGridView();
+            this.dgvLogs = new Krypton.Toolkit.KryptonDataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnUpdate = new Krypton.Toolkit.KryptonButton();
             this.btnDelete = new Krypton.Toolkit.KryptonButton();
@@ -49,13 +49,13 @@
             this.kryptonPanel1.SuspendLayout();
             this.tcAccounts.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.btnHistory);
+            this.kryptonPanel1.Controls.Add(this.btnLogs);
             this.kryptonPanel1.Controls.Add(this.btnBooks);
             this.kryptonPanel1.Controls.Add(this.btnAccounts);
             this.kryptonPanel1.Controls.Add(this.btnLogout);
@@ -65,13 +65,13 @@
             this.kryptonPanel1.Size = new System.Drawing.Size(167, 561);
             this.kryptonPanel1.TabIndex = 10;
             // 
-            // btnHistory
+            // btnLogs
             // 
-            this.btnHistory.Location = new System.Drawing.Point(20, 395);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(120, 52);
-            this.btnHistory.TabIndex = 4;
-            this.btnHistory.Values.Text = "History";
+            this.btnLogs.Location = new System.Drawing.Point(20, 395);
+            this.btnLogs.Name = "btnLogs";
+            this.btnLogs.Size = new System.Drawing.Size(120, 52);
+            this.btnLogs.TabIndex = 4;
+            this.btnLogs.Values.Text = "Logs";
             // 
             // btnBooks
             // 
@@ -121,7 +121,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dgvHistory);
+            this.tabPage1.Controls.Add(this.dgvLogs);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -130,12 +130,12 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dgvHistory
+            // dgvLogs
             // 
-            this.dgvHistory.Location = new System.Drawing.Point(27, 61);
-            this.dgvHistory.Name = "dgvHistory";
-            this.dgvHistory.Size = new System.Drawing.Size(720, 450);
-            this.dgvHistory.TabIndex = 2;
+            this.dgvLogs.Location = new System.Drawing.Point(25, 61);
+            this.dgvLogs.Name = "dgvLogs";
+            this.dgvLogs.Size = new System.Drawing.Size(720, 450);
+            this.dgvLogs.TabIndex = 2;
             // 
             // tabPage2
             // 
@@ -223,7 +223,7 @@
             this.kryptonPanel1.ResumeLayout(false);
             this.tcAccounts.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -233,14 +233,14 @@
         #endregion
 
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private Krypton.Toolkit.KryptonButton btnHistory;
+        private Krypton.Toolkit.KryptonButton btnLogs;
         private Krypton.Toolkit.KryptonButton btnBooks;
         private Krypton.Toolkit.KryptonButton btnAccounts;
         private Krypton.Toolkit.KryptonButton btnLogout;
         private Krypton.Toolkit.KryptonButton btnDashboard;
         private TabControl tcAccounts;
         private TabPage tabPage1;
-        private Krypton.Toolkit.KryptonDataGridView dgvHistory;
+        private Krypton.Toolkit.KryptonDataGridView dgvLogs;
         private TabPage tabPage2;
         private Krypton.Toolkit.KryptonButton btnUpdate;
         private Krypton.Toolkit.KryptonButton btnDelete;

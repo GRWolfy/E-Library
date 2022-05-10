@@ -40,7 +40,7 @@
         {
             Connection.DB();
             Function.gen = "SELECT * FROM history";
-            Function.fill(Function.gen, dgvHistory);
+            Function.fill(Function.gen, dgvLogs);
         }
     }
 }

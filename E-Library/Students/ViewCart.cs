@@ -80,6 +80,13 @@ namespace E_Library.Students
             Function.command = new SqlCommand(Function.gen, Connection.con);
             Function.command.ExecuteNonQuery();
             Connection.con.Close();
+
+            Connection.DB();
+            Function.gen = "UPDATE books SET availability = '"+ "NOT AVAILABLE" +"' " +
+                "WHERE bookid = '"+ bookid +"' ";
+            Function.command = new SqlCommand(Function.gen, Connection.con);
+            Function.command.ExecuteNonQuery();
+            Connection.con.Close();
         }
 
         private void deleteCart()
