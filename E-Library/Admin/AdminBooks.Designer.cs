@@ -29,6 +29,7 @@ namespace E_Library.Admin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminBooks));
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
             this.btnHistory = new Krypton.Toolkit.KryptonButton();
             this.btnBooks = new Krypton.Toolkit.KryptonButton();
@@ -164,6 +165,7 @@ namespace E_Library.Admin
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // btnUpdatepic
             // 
@@ -185,11 +187,15 @@ namespace E_Library.Admin
             // 
             // pbBook
             // 
-            this.pbBook.Location = new System.Drawing.Point(27, 59);
+            this.pbBook.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbBook.Image = ((System.Drawing.Image)(resources.GetObject("pbBook.Image")));
+            this.pbBook.Location = new System.Drawing.Point(27, 76);
             this.pbBook.Name = "pbBook";
             this.pbBook.Size = new System.Drawing.Size(289, 338);
+            this.pbBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBook.TabIndex = 9;
             this.pbBook.TabStop = false;
+            this.pbBook.Click += new System.EventHandler(this.pbBook_Click);
             // 
             // txtBooklocation
             // 

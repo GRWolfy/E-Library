@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.Collections;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace E_Library.Students
 {
@@ -15,6 +7,9 @@ namespace E_Library.Students
     {
         private int cartid;
         private int idnumber = User_Admission.Login.idnumber;
+        private int maxRows;
+        private string borrowdatetime = "";
+        private int bookid;
 
         public ViewCart()
         {
@@ -29,9 +24,10 @@ namespace E_Library.Students
         private void viewCart()
         {
             Connection.DB();
-            Function.gen = "SELECT cart.cartid, books.bookname AS [NAME], books.bookauthor AS [AUTHOR], books.booklocation AS [LOCATION] FROM cart INNER JOIN books ON cart.bookid = books.bookid WHERE cart.idnumber = '"+ idnumber +"' ";
+            Function.gen = "SELECT cart.bookid, cart.cartid, books.bookname AS [NAME], books.bookauthor AS [AUTHOR], books.booklocation AS [LOCATION] FROM cart INNER JOIN books ON cart.bookid = books.bookid WHERE cart.idnumber = '" + idnumber + "' ";
             Function.fill(Function.gen, dgvCart);
             dgvCart.Columns["cartid"].Visible = false;
+            dgvCart.Columns["bookid"].Visible = false;
         }
 
         private void dgvCart_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -58,8 +54,46 @@ namespace E_Library.Students
 
         private void btnProceedBorrow_Click(object sender, EventArgs e)
         {
+            maxRows = dgvCart.RowCount;
+            borrowdatetime = DateTime.Now.ToString("dddd, dd MMMM yyyy hh:mm tt");
+
+            for (int i = 0; i < maxRows; i++)
+            {
+                bookid = Convert.ToInt32(dgvCart.Rows[i].Cells["bookid"].Value);
+                insertToLogs();
+            }
+
+            deleteCart();
+
             new BorrowMessage().Show();
             Hide();
+        }
+
+        private void insertToLogs()
+        {
+            Connection.DB();
+            Function.gen = "INSERT INTO logs(idnumber, bookid, borrowdatetime, returndatetime) " +
+                "VALUES('" + idnumber + "', " +
+                "'" + bookid + "', " +
+                "'" + borrowdatetime + "', " +
+                "'" + "PENDING" + "')";
+            Function.command = new SqlCommand(Function.gen, Connection.con);
+            Function.command.ExecuteNonQuery();
+            Connection.con.Close();
+        }
+
+        private void deleteCart()
+        {
+            Connection.DB();
+            Function.gen = "DELETE FROM cart WHERE idnumber = '" + idnumber + "' ";
+            Function.command = new SqlCommand(Function.gen, Connection.con);
+            Function.command.ExecuteNonQuery();
+            Connection.con.Close();
+        }
+
+        private void btnTEST_Click(object sender, EventArgs e)
+        {
+            lblTEST.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy hh:mm tt");
         }
     }
 }

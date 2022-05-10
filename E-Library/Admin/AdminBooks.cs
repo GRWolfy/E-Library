@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data.SqlClient;
 
 namespace E_Library.Admin
 {
@@ -84,13 +75,20 @@ namespace E_Library.Admin
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            byte[] img = null;
+            FileStream fs = new FileStream(imagelocation, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            img = br.ReadBytes((int)fs.Length);
+
             Connection.DB();
-            Function.gen = "INSERT INTO books(bookname, bookauthor, booklocation, availability)" +
+            Function.gen = "INSERT INTO books(bookname, bookauthor, booklocation, availability, picture)" +
                 "VALUES('" + txtBookname.Text + "', " +
                 "'" + txtBookauthor.Text + "', " +
                 "'" + txtBooklocation.Text + "', " +
-                "'" + "AVAILABLE" + "') ";
+                "'" + "AVAILABLE" + "'," +
+                " @img ) ";
             Function.command = new SqlCommand(Function.gen, Connection.con);
+            Function.command.Parameters.Add(new SqlParameter("@img", img));
             Function.command.ExecuteNonQuery();
             MessageBox.Show("Book Added.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Connection.con.Close();
@@ -144,6 +142,16 @@ namespace E_Library.Admin
             Function.command.ExecuteNonQuery();
             MessageBox.Show("Update success.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Connection.con.Close();
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbBook_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

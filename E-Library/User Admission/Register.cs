@@ -19,7 +19,7 @@ namespace E_Library.User_Admission
             Connection.DB();
             Function.gen = "INSERT INTO users(idnumber, role, firstname, lastname, gender, yearlevel, course, email, address, contactnumber, password) " +
                 "VALUES('" + txtIdnumber.Text + "', " +
-                "'" + "STUDENT" + "', " +
+                "'" + "ADMIN" + "', " +
                 "'" + txtFirstname.Text + "', " +
                 "'" + txtLastname.Text + "', " +
                 "'" + cmbGender.Text + "', " +

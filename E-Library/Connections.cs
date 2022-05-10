@@ -5,7 +5,7 @@ namespace E_Library
     public class Connection
     {
         public static SqlConnection con;
-        private static string dbconnect = "Data Source=DESKTOP-47DNV24;Initial Catalog=E-Library;Integrated Security=True"; //connection string 
+        private static string dbconnect = "Data Source=DESKTOP-VM9TO32;Initial Catalog=E-Library;Integrated Security=True"; //connection string 
 
         public static void DB()
         {

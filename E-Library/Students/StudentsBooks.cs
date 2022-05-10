@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data.SqlClient;
 
 namespace E_Library.Students
 {
@@ -116,9 +107,10 @@ namespace E_Library.Students
 
             if (gen == DialogResult.Yes)
             {
+                Connection.DB();
                 Function.gen = "INSERT INTO cart(idnumber, bookid)" +
-                    "VALUES('"+ idnumber +"'," +
-                    "'"+ bookid +"') ";
+                    "VALUES('" + idnumber + "'," +
+                    "'" + bookid + "') ";
                 Function.command = new SqlCommand(Function.gen, Connection.con);
                 Function.command.ExecuteNonQuery();
                 Connection.con.Close();
