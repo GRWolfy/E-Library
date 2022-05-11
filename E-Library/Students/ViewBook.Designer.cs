@@ -53,6 +53,7 @@
             this.btnReturn.Size = new System.Drawing.Size(90, 25);
             this.btnReturn.TabIndex = 1;
             this.btnReturn.Values.Text = "Return";
+            this.btnReturn.Visible = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // kryptonLabel1
@@ -94,6 +95,7 @@
             this.btnAddtocart.Size = new System.Drawing.Size(90, 25);
             this.btnAddtocart.TabIndex = 6;
             this.btnAddtocart.Values.Text = "Add to cart";
+            this.btnAddtocart.Visible = false;
             this.btnAddtocart.Click += new System.EventHandler(this.btnAddtocart_Click);
             // 
             // ViewBook
@@ -109,6 +111,7 @@
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.pbBook);
             this.Name = "ViewBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewLogs";
             this.Load += new System.EventHandler(this.ViewLogs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBook)).EndInit();

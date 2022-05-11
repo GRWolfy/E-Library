@@ -116,6 +116,7 @@
             this.Controls.Add(this.dgvLogs);
             this.Controls.Add(this.kryptonPanel1);
             this.Name = "StudentsReturn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentsReturn";
             this.Load += new System.EventHandler(this.StudentsReturn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();

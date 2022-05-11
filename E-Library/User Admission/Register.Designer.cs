@@ -286,6 +286,7 @@
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.txtIdnumber);
             this.Name = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.Load += new System.EventHandler(this.Register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmbGender)).EndInit();

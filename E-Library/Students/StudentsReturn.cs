@@ -36,8 +36,17 @@ namespace E_Library.Students
         private void dgvLogs_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             bookid = Convert.ToInt32(dgvLogs.Rows[e.RowIndex].Cells["bookid"].Value.ToString());
-            ViewBook.directory = "RETURN";
-            new ViewBook().Show();
+            var directory = dgvLogs.Rows[e.RowIndex].Cells["RETURN TIME"].Value.ToString().Equals("PENDING") ? "RETURN" : "NEED CONFIRMATION";
+            ViewBook.directory = directory;
+
+            if (directory.Equals("RETURN"))
+            {
+                new ViewBook().Show();
+            } 
+            else
+            {
+                
+            }
 
         }
 

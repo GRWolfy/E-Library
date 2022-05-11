@@ -105,6 +105,7 @@
             this.Controls.Add(this.btnProceedBorrow);
             this.Controls.Add(this.dgvCart);
             this.Name = "ViewCart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewCart";
             this.Load += new System.EventHandler(this.ViewCart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();

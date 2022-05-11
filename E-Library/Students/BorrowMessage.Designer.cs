@@ -57,6 +57,7 @@
             this.Controls.Add(this.btnProceed);
             this.Controls.Add(this.kryptonLabel1);
             this.Name = "BorrowMessage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BorrowMessage";
             this.ResumeLayout(false);
             this.PerformLayout();

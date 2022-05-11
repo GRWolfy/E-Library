@@ -38,19 +38,14 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvLogs = new Krypton.Toolkit.KryptonDataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnUpdate = new Krypton.Toolkit.KryptonButton();
-            this.btnDelete = new Krypton.Toolkit.KryptonButton();
-            this.txtBookauthor = new Krypton.Toolkit.KryptonTextBox();
-            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
-            this.txtBookname = new Krypton.Toolkit.KryptonTextBox();
-            this.btnSave = new Krypton.Toolkit.KryptonButton();
-            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.dgvPendingBooks = new Krypton.Toolkit.KryptonDataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.tcAccounts.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPendingBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -127,7 +122,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(762, 521);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "VIEW";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dgvLogs
@@ -139,83 +134,31 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.btnUpdate);
-            this.tabPage2.Controls.Add(this.btnDelete);
-            this.tabPage2.Controls.Add(this.txtBookauthor);
-            this.tabPage2.Controls.Add(this.kryptonLabel2);
-            this.tabPage2.Controls.Add(this.txtBookname);
-            this.tabPage2.Controls.Add(this.btnSave);
-            this.tabPage2.Controls.Add(this.kryptonLabel1);
+            this.tabPage2.Controls.Add(this.dgvPendingBooks);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(762, 521);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "PENDING";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnUpdate
+            // dgvPendingBooks
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(241, 460);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(90, 25);
-            this.btnUpdate.TabIndex = 6;
-            this.btnUpdate.Values.Text = "Update";
+            this.dgvPendingBooks.Location = new System.Drawing.Point(21, 35);
+            this.dgvPendingBooks.Name = "dgvPendingBooks";
+            this.dgvPendingBooks.Size = new System.Drawing.Size(720, 450);
+            this.dgvPendingBooks.TabIndex = 3;
+            this.dgvPendingBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPendingBooks_CellClick);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(507, 445);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(90, 25);
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.Values.Text = "Delete";
-            // 
-            // txtBookauthor
-            // 
-            this.txtBookauthor.Location = new System.Drawing.Point(231, 177);
-            this.txtBookauthor.Name = "txtBookauthor";
-            this.txtBookauthor.Size = new System.Drawing.Size(100, 23);
-            this.txtBookauthor.TabIndex = 4;
-            // 
-            // kryptonLabel2
-            // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(90, 183);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(78, 20);
-            this.kryptonLabel2.TabIndex = 3;
-            this.kryptonLabel2.Values.Text = "Book author";
-            // 
-            // txtBookname
-            // 
-            this.txtBookname.Location = new System.Drawing.Point(231, 103);
-            this.txtBookname.Name = "txtBookname";
-            this.txtBookname.Size = new System.Drawing.Size(100, 23);
-            this.txtBookname.TabIndex = 2;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(366, 445);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(90, 25);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Values.Text = "Save";
-            // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(90, 109);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(72, 20);
-            this.kryptonLabel1.TabIndex = 0;
-            this.kryptonLabel1.Values.Text = "Book name";
-            // 
-            // AdminHistory
+            // AdminLogs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 628);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.tcAccounts);
-            this.Name = "AdminHistory";
+            this.Name = "AdminLogs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminHistory";
             this.Load += new System.EventHandler(this.AdminHistory_Load);
@@ -225,7 +168,7 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPendingBooks)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -242,12 +185,6 @@
         private TabPage tabPage1;
         private Krypton.Toolkit.KryptonDataGridView dgvLogs;
         private TabPage tabPage2;
-        private Krypton.Toolkit.KryptonButton btnUpdate;
-        private Krypton.Toolkit.KryptonButton btnDelete;
-        private Krypton.Toolkit.KryptonTextBox txtBookauthor;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
-        private Krypton.Toolkit.KryptonTextBox txtBookname;
-        private Krypton.Toolkit.KryptonButton btnSave;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonDataGridView dgvPendingBooks;
     }
 }

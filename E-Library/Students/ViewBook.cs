@@ -16,7 +16,6 @@ namespace E_Library.Students
         public static string directory = "";
         private int bookid;
         private int idnumber = User_Admission.Login.idnumber;
-        private string returndatetime = "";
 
         public ViewBook()
         {
@@ -37,7 +36,7 @@ namespace E_Library.Students
                 btnReturn.Visible = true;
                 btnAddtocart.Visible = false;
             }
-            else
+            else if (directory.Equals("CART"))
             {
                 bookid = StudentsBooks.bookid;
                 btnReturn.Visible = false;
@@ -76,28 +75,24 @@ namespace E_Library.Students
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            returndatetime = DateTime.Now.ToString("dddd, dd MMMM yyyy hh:mm tt");
-
             Connection.DB();
-            Function.gen = "UPDATE logs SET returndatetime = '" + returndatetime + "' " +
+            Function.gen = "UPDATE logs SET returndatetime = '" + "NEED CONFIRMATION" + "' " +
                 "WHERE bookid = '"+ bookid +"' AND idnumber = '"+ idnumber +"' ";
             Function.command = new SqlCommand(Function.gen, Connection.con);
             Function.command.ExecuteNonQuery();
             Connection.con.Close();
-
-            Connection.DB();
-            Function.gen = "UPDATE books SET availability = '" + "AVAILABLE" + "' " +
-                " WHERE bookid = '"+ bookid +"' ";
-            Function.command = new SqlCommand(Function.gen, Connection.con);
-            Function.command.ExecuteNonQuery();
-            Connection.con.Close();
-
-            MessageBox.Show("Book returned.", "RETURNED", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnAddtocart_Click(object sender, EventArgs e)
         {
-
+            Connection.DB();
+            Function.gen = "INSERT INTO cart(idnumber, bookid)" +
+                "VALUES('" + idnumber + "'," +
+                "'" + bookid + "') ";
+            Function.command = new SqlCommand(Function.gen, Connection.con);
+            Function.command.ExecuteNonQuery();
+            Connection.con.Close();
+            MessageBox.Show("Book added to cart.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
