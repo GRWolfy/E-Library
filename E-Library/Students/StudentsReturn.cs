@@ -36,7 +36,8 @@ namespace E_Library.Students
         private void dgvLogs_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             bookid = Convert.ToInt32(dgvLogs.Rows[e.RowIndex].Cells["bookid"].Value.ToString());
-            new ViewLogs().Show();
+            ViewBook.directory = "RETURN";
+            new ViewBook().Show();
 
         }
 

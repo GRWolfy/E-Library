@@ -34,11 +34,12 @@
             this.btnAccounts = new Krypton.Toolkit.KryptonButton();
             this.btnLogout = new Krypton.Toolkit.KryptonButton();
             this.btnDashboard = new Krypton.Toolkit.KryptonButton();
-            this.flBooks = new System.Windows.Forms.FlowLayoutPanel();
             this.txtSearchbook = new Krypton.Toolkit.KryptonTextBox();
             this.btnCart = new Krypton.Toolkit.KryptonButton();
+            this.dgvBooks = new Krypton.Toolkit.KryptonDataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -97,13 +98,6 @@
             this.btnDashboard.Values.Text = "Home";
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // flBooks
-            // 
-            this.flBooks.Location = new System.Drawing.Point(250, 85);
-            this.flBooks.Name = "flBooks";
-            this.flBooks.Size = new System.Drawing.Size(714, 487);
-            this.flBooks.TabIndex = 12;
-            // 
             // txtSearchbook
             // 
             this.txtSearchbook.Location = new System.Drawing.Point(517, 37);
@@ -120,14 +114,22 @@
             this.btnCart.Values.Text = "Cart";
             this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
+            // dgvBooks
+            // 
+            this.dgvBooks.Location = new System.Drawing.Point(242, 97);
+            this.dgvBooks.Name = "dgvBooks";
+            this.dgvBooks.Size = new System.Drawing.Size(720, 450);
+            this.dgvBooks.TabIndex = 15;
+            this.dgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
+            // 
             // StudentsBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 628);
+            this.Controls.Add(this.dgvBooks);
             this.Controls.Add(this.btnCart);
             this.Controls.Add(this.txtSearchbook);
-            this.Controls.Add(this.flBooks);
             this.Controls.Add(this.kryptonPanel1);
             this.Name = "StudentsBooks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -135,6 +137,7 @@
             this.Load += new System.EventHandler(this.StudentsBooks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,8 +151,8 @@
         private Krypton.Toolkit.KryptonButton btnAccounts;
         private Krypton.Toolkit.KryptonButton btnLogout;
         private Krypton.Toolkit.KryptonButton btnDashboard;
-        private FlowLayoutPanel flBooks;
         private Krypton.Toolkit.KryptonTextBox txtSearchbook;
         private Krypton.Toolkit.KryptonButton btnCart;
+        private Krypton.Toolkit.KryptonDataGridView dgvBooks;
     }
 }

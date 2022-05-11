@@ -1,6 +1,6 @@
 ﻿namespace E_Library.Students
 {
-    partial class ViewLogs
+    partial class ViewBook
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@
             this.lblTitle = new Krypton.Toolkit.KryptonLabel();
             this.lblAuthor = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.btnAddtocart = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbBook)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,18 +87,28 @@
             this.kryptonLabel4.TabIndex = 4;
             this.kryptonLabel4.Values.Text = "Author: ";
             // 
-            // ViewLogs
+            // btnAddtocart
+            // 
+            this.btnAddtocart.Location = new System.Drawing.Point(328, 357);
+            this.btnAddtocart.Name = "btnAddtocart";
+            this.btnAddtocart.Size = new System.Drawing.Size(90, 25);
+            this.btnAddtocart.TabIndex = 6;
+            this.btnAddtocart.Values.Text = "Add to cart";
+            this.btnAddtocart.Click += new System.EventHandler(this.btnAddtocart_Click);
+            // 
+            // ViewBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAddtocart);
             this.Controls.Add(this.lblAuthor);
             this.Controls.Add(this.kryptonLabel4);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.pbBook);
-            this.Name = "ViewLogs";
+            this.Name = "ViewBook";
             this.Text = "ViewLogs";
             this.Load += new System.EventHandler(this.ViewLogs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBook)).EndInit();
@@ -114,5 +125,6 @@
         private Krypton.Toolkit.KryptonLabel lblTitle;
         private Krypton.Toolkit.KryptonLabel lblAuthor;
         private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private Krypton.Toolkit.KryptonButton btnAddtocart;
     }
 }

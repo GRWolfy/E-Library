@@ -11,20 +11,38 @@ using System.Windows.Forms;
 
 namespace E_Library.Students
 {
-    public partial class ViewLogs : Form
+    public partial class ViewBook : Form
     {
-        private int bookid = StudentsReturn.bookid;
+        public static string directory = "";
+        private int bookid;
         private int idnumber = User_Admission.Login.idnumber;
         private string returndatetime = "";
 
-        public ViewLogs()
+        public ViewBook()
         {
             InitializeComponent();
         }
 
         private void ViewLogs_Load(object sender, EventArgs e)
         {
+            selectDirectory();
             getBookInformation();
+        }
+
+        private void selectDirectory() 
+        {
+            if (directory.Equals("RETURN"))
+            {
+                bookid = StudentsReturn.bookid;
+                btnReturn.Visible = true;
+                btnAddtocart.Visible = false;
+            }
+            else
+            {
+                bookid = StudentsBooks.bookid;
+                btnReturn.Visible = false;
+                btnAddtocart.Visible = true;
+            }
         }
 
         private void getBookInformation()
@@ -75,6 +93,11 @@ namespace E_Library.Students
             Connection.con.Close();
 
             MessageBox.Show("Book returned.", "RETURNED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnAddtocart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
