@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            this.btn = new Krypton.Toolkit.KryptonButton();
+            this.btnReturn = new Krypton.Toolkit.KryptonButton();
             this.btnBooks = new Krypton.Toolkit.KryptonButton();
             this.btnProfile = new Krypton.Toolkit.KryptonButton();
             this.btnLogout = new Krypton.Toolkit.KryptonButton();
@@ -67,7 +67,7 @@
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.btn);
+            this.kryptonPanel1.Controls.Add(this.btnReturn);
             this.kryptonPanel1.Controls.Add(this.btnBooks);
             this.kryptonPanel1.Controls.Add(this.btnProfile);
             this.kryptonPanel1.Controls.Add(this.btnLogout);
@@ -77,13 +77,14 @@
             this.kryptonPanel1.Size = new System.Drawing.Size(167, 561);
             this.kryptonPanel1.TabIndex = 8;
             // 
-            // btn
+            // btnReturn
             // 
-            this.btn.Location = new System.Drawing.Point(20, 395);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(120, 52);
-            this.btn.TabIndex = 4;
-            this.btn.Values.Text = "Books";
+            this.btnReturn.Location = new System.Drawing.Point(20, 395);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(120, 52);
+            this.btnReturn.TabIndex = 4;
+            this.btnReturn.Values.Text = "Return";
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnBooks
             // 
@@ -109,6 +110,7 @@
             this.btnLogout.Size = new System.Drawing.Size(120, 52);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Values.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnDashboard
             // 
@@ -375,7 +377,7 @@
         #endregion
 
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private Krypton.Toolkit.KryptonButton btn;
+        private Krypton.Toolkit.KryptonButton btnReturn;
         private Krypton.Toolkit.KryptonButton btnBooks;
         private Krypton.Toolkit.KryptonButton btnProfile;
         private Krypton.Toolkit.KryptonButton btnLogout;

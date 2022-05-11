@@ -39,5 +39,29 @@ namespace E_Library.Students
             new ViewLogs().Show();
 
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            new User_Admission.Login().Show();
+            Hide();
+        }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            new StudentsBooks().Show();
+            Hide();
+        }
+
+        private void btnAccounts_Click(object sender, EventArgs e)
+        {
+            new StudentsProfile().Show();
+            Hide();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            new StudentsDashboard().Show();
+            Hide();
+        }
     }
 }

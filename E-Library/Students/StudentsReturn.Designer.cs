@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            this.btnHistory = new Krypton.Toolkit.KryptonButton();
+            this.btnReturn = new Krypton.Toolkit.KryptonButton();
             this.btnBooks = new Krypton.Toolkit.KryptonButton();
             this.btnAccounts = new Krypton.Toolkit.KryptonButton();
             this.btnLogout = new Krypton.Toolkit.KryptonButton();
@@ -42,7 +42,7 @@
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.btnHistory);
+            this.kryptonPanel1.Controls.Add(this.btnReturn);
             this.kryptonPanel1.Controls.Add(this.btnBooks);
             this.kryptonPanel1.Controls.Add(this.btnAccounts);
             this.kryptonPanel1.Controls.Add(this.btnLogout);
@@ -52,13 +52,13 @@
             this.kryptonPanel1.Size = new System.Drawing.Size(167, 561);
             this.kryptonPanel1.TabIndex = 14;
             // 
-            // btnHistory
+            // btnReturn
             // 
-            this.btnHistory.Location = new System.Drawing.Point(20, 395);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(120, 52);
-            this.btnHistory.TabIndex = 4;
-            this.btnHistory.Values.Text = "History";
+            this.btnReturn.Location = new System.Drawing.Point(20, 395);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(120, 52);
+            this.btnReturn.TabIndex = 4;
+            this.btnReturn.Values.Text = "Return";
             // 
             // btnBooks
             // 
@@ -67,6 +67,7 @@
             this.btnBooks.Size = new System.Drawing.Size(120, 52);
             this.btnBooks.TabIndex = 3;
             this.btnBooks.Values.Text = "Books";
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
             // btnAccounts
             // 
@@ -75,6 +76,7 @@
             this.btnAccounts.Size = new System.Drawing.Size(120, 52);
             this.btnAccounts.TabIndex = 2;
             this.btnAccounts.Values.Text = "Accounts";
+            this.btnAccounts.Click += new System.EventHandler(this.btnAccounts_Click);
             // 
             // btnLogout
             // 
@@ -83,6 +85,7 @@
             this.btnLogout.Size = new System.Drawing.Size(120, 52);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Values.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnDashboard
             // 
@@ -91,6 +94,7 @@
             this.btnDashboard.Size = new System.Drawing.Size(120, 52);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Values.Text = "Home";
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // dgvLogs
             // 
@@ -123,7 +127,7 @@
 
         #endregion
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private Krypton.Toolkit.KryptonButton btnHistory;
+        private Krypton.Toolkit.KryptonButton btnReturn;
         private Krypton.Toolkit.KryptonButton btnBooks;
         private Krypton.Toolkit.KryptonButton btnAccounts;
         private Krypton.Toolkit.KryptonButton btnLogout;

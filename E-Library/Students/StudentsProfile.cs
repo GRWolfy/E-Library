@@ -69,5 +69,17 @@ namespace E_Library.Students
             new StudentsBooks().Show();
             Hide();
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            new StudentsReturn().Show();
+            Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            new User_Admission.Login().Show();
+            Hide();
+        }
     }
 }

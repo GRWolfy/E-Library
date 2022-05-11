@@ -24,5 +24,11 @@
             new StudentsReturn().Show();
             Hide();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            new User_Admission.Login().Show();
+            Hide();
+        }
     }
 }
