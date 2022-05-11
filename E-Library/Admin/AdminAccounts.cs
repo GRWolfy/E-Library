@@ -12,6 +12,7 @@ namespace E_Library.Admin
         private void AdminAccount_Load(object sender, EventArgs e)
         {
             viewUserinformation();
+            showManageButtons(false);
         }
 
         private void viewUserinformation()
@@ -42,6 +43,9 @@ namespace E_Library.Admin
             Function.command.ExecuteNonQuery();
             MessageBox.Show("Registration success.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Connection.con.Close();
+
+            doResetFields();
+            showManageButtons(false);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -62,6 +66,9 @@ namespace E_Library.Admin
             Function.command.ExecuteNonQuery();
             MessageBox.Show("Update success.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Connection.con.Close();
+
+            doResetFields();
+            showManageButtons(false);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -75,6 +82,9 @@ namespace E_Library.Admin
                 Function.command = new SqlCommand(Function.gen, Connection.con);
                 Function.command.ExecuteNonQuery();
                 Connection.con.Close();
+
+                doResetFields();
+                showManageButtons(false);
             }
         }
 
@@ -92,13 +102,24 @@ namespace E_Library.Admin
             txtAddress.Text = dgvAccounts.Rows[e.RowIndex].Cells["ADDRESS"].Value.ToString();
             txtPassword.Text = dgvAccounts.Rows[e.RowIndex].Cells["password"].Value.ToString();
 
+            tcAccounts.SelectedIndex = 1;
+            showManageButtons(true);
         }
 
         private void doResetFields()
         {
-            new AdminAccounts().Show();
+            var temp = new AdminAccounts();
+            temp.Show();
+            temp.tcAccounts.SelectedIndex = 0;
             Hide();
-            tcAccounts.SelectedIndex = 0;
+            
+        }
+
+        private void showManageButtons(bool value)
+        {
+            btnRegister.Visible = value ? false : true;
+            btnUpdate.Visible = value;
+            btnDelete.Visible = value;
         }
 
         private void btnBooks_Click(object sender, EventArgs e)

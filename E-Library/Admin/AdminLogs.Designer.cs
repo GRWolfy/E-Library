@@ -34,14 +34,14 @@
             this.btnAccounts = new Krypton.Toolkit.KryptonButton();
             this.btnLogout = new Krypton.Toolkit.KryptonButton();
             this.btnDashboard = new Krypton.Toolkit.KryptonButton();
-            this.tcAccounts = new System.Windows.Forms.TabControl();
+            this.tcLogs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvLogs = new Krypton.Toolkit.KryptonDataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvPendingBooks = new Krypton.Toolkit.KryptonDataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
-            this.tcAccounts.SuspendLayout();
+            this.tcLogs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -104,15 +104,15 @@
             this.btnDashboard.Values.Text = "Home";
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // tcAccounts
+            // tcLogs
             // 
-            this.tcAccounts.Controls.Add(this.tabPage1);
-            this.tcAccounts.Controls.Add(this.tabPage2);
-            this.tcAccounts.Location = new System.Drawing.Point(219, 53);
-            this.tcAccounts.Name = "tcAccounts";
-            this.tcAccounts.SelectedIndex = 0;
-            this.tcAccounts.Size = new System.Drawing.Size(770, 549);
-            this.tcAccounts.TabIndex = 9;
+            this.tcLogs.Controls.Add(this.tabPage1);
+            this.tcLogs.Controls.Add(this.tabPage2);
+            this.tcLogs.Location = new System.Drawing.Point(219, 53);
+            this.tcLogs.Name = "tcLogs";
+            this.tcLogs.SelectedIndex = 0;
+            this.tcLogs.Size = new System.Drawing.Size(770, 549);
+            this.tcLogs.TabIndex = 9;
             // 
             // tabPage1
             // 
@@ -157,14 +157,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 628);
             this.Controls.Add(this.kryptonPanel1);
-            this.Controls.Add(this.tcAccounts);
+            this.Controls.Add(this.tcLogs);
             this.Name = "AdminLogs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminHistory";
             this.Load += new System.EventHandler(this.AdminHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
-            this.tcAccounts.ResumeLayout(false);
+            this.tcLogs.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).EndInit();
             this.tabPage2.ResumeLayout(false);
@@ -181,7 +181,7 @@
         private Krypton.Toolkit.KryptonButton btnAccounts;
         private Krypton.Toolkit.KryptonButton btnLogout;
         private Krypton.Toolkit.KryptonButton btnDashboard;
-        private TabControl tcAccounts;
+        private TabControl tcLogs;
         private TabPage tabPage1;
         private Krypton.Toolkit.KryptonDataGridView dgvLogs;
         private TabPage tabPage2;

@@ -231,8 +231,10 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(183, 222);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.Size = new System.Drawing.Size(100, 23);
             this.txtPassword.TabIndex = 27;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // kryptonLabel1
             // 
@@ -246,8 +248,10 @@
             // 
             this.txtConfirmpassword.Location = new System.Drawing.Point(183, 269);
             this.txtConfirmpassword.Name = "txtConfirmpassword";
+            this.txtConfirmpassword.PasswordChar = '●';
             this.txtConfirmpassword.Size = new System.Drawing.Size(100, 23);
             this.txtConfirmpassword.TabIndex = 29;
+            this.txtConfirmpassword.UseSystemPasswordChar = true;
             // 
             // kryptonLabel11
             // 

@@ -36,7 +36,7 @@ namespace E_Library.Admin
             this.btnAccounts = new Krypton.Toolkit.KryptonButton();
             this.btnLogout = new Krypton.Toolkit.KryptonButton();
             this.btnDashboard = new Krypton.Toolkit.KryptonButton();
-            this.tcAccounts = new System.Windows.Forms.TabControl();
+            this.tcBooks = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvBooks = new Krypton.Toolkit.KryptonDataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -54,7 +54,7 @@ namespace E_Library.Admin
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
-            this.tcAccounts.SuspendLayout();
+            this.tcBooks.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -117,15 +117,15 @@ namespace E_Library.Admin
             this.btnDashboard.Values.Text = "Home";
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // tcAccounts
+            // tcBooks
             // 
-            this.tcAccounts.Controls.Add(this.tabPage1);
-            this.tcAccounts.Controls.Add(this.tabPage2);
-            this.tcAccounts.Location = new System.Drawing.Point(219, 53);
-            this.tcAccounts.Name = "tcAccounts";
-            this.tcAccounts.SelectedIndex = 0;
-            this.tcAccounts.Size = new System.Drawing.Size(770, 549);
-            this.tcAccounts.TabIndex = 7;
+            this.tcBooks.Controls.Add(this.tabPage1);
+            this.tcBooks.Controls.Add(this.tabPage2);
+            this.tcBooks.Location = new System.Drawing.Point(219, 53);
+            this.tcBooks.Name = "tcBooks";
+            this.tcBooks.SelectedIndex = 0;
+            this.tcBooks.Size = new System.Drawing.Size(770, 549);
+            this.tcBooks.TabIndex = 7;
             // 
             // tabPage1
             // 
@@ -275,14 +275,14 @@ namespace E_Library.Admin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 628);
             this.Controls.Add(this.kryptonPanel1);
-            this.Controls.Add(this.tcAccounts);
+            this.Controls.Add(this.tcBooks);
             this.Name = "AdminBooks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminBooks";
             this.Load += new System.EventHandler(this.AdminBooks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
-            this.tcAccounts.ResumeLayout(false);
+            this.tcBooks.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             this.tabPage2.ResumeLayout(false);
@@ -300,7 +300,7 @@ namespace E_Library.Admin
         private Krypton.Toolkit.KryptonButton btnAccounts;
         private Krypton.Toolkit.KryptonButton btnLogout;
         private Krypton.Toolkit.KryptonButton btnDashboard;
-        private TabControl tcAccounts;
+        private TabControl tcBooks;
         private TabPage tabPage1;
         private Krypton.Toolkit.KryptonDataGridView dgvBooks;
         private TabPage tabPage2;

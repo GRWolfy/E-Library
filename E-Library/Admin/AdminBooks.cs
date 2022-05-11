@@ -27,6 +27,7 @@ namespace E_Library.Admin
         private void AdminBooks_Load(object sender, EventArgs e)
         {
             viewBooks();
+            showManageButtons(false);
         }
 
         private void viewBooks()
@@ -50,6 +51,8 @@ namespace E_Library.Admin
                 Function.command.ExecuteNonQuery();
                 Connection.con.Close();
                 MessageBox.Show("DELETED", "DELETED", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                showManageButtons(false);
+                doResetFields();
             }
         }
 
@@ -70,6 +73,9 @@ namespace E_Library.Admin
                 MemoryStream ms = new MemoryStream(img);
                 pbBook.Image = Image.FromStream(ms);
             }
+
+            tcBooks.SelectedIndex = 1;
+            showManageButtons(true);
 
         }
 
@@ -92,6 +98,8 @@ namespace E_Library.Admin
             Function.command.ExecuteNonQuery();
             MessageBox.Show("Book Added.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Connection.con.Close();
+            showManageButtons(false);
+            doResetFields();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -104,6 +112,8 @@ namespace E_Library.Admin
             Function.command.ExecuteNonQuery();
             MessageBox.Show("Update success.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Connection.con.Close();
+            showManageButtons(false);
+            doResetFields();
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -154,6 +164,24 @@ namespace E_Library.Admin
         {
             new User_Admission.Login().Show();
             Hide();
+        }
+
+        private void showManageButtons(bool value)
+        {
+            btnBrowse.Visible = value ? false : true;
+            btnSave.Visible = value ? false : true;
+            btnUpdate.Visible = value;
+            btnUpdatepic.Visible = value;
+            btnDelete.Visible = value;
+        }
+
+        private void doResetFields()
+        {
+            var temp = new AdminBooks();
+            temp.Show();
+            temp.tcBooks.SelectedIndex = 0;
+            Hide();
+
         }
     }
 }

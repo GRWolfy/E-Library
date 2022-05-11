@@ -88,6 +88,9 @@ namespace E_Library.Admin
                 updateBookAvailability();
 
                 MessageBox.Show("Book returned.", "RETURNED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var temp = new AdminLogs();
+                temp.Show();
+                temp.tcLogs.SelectedIndex = 0;
             }
         }
 
