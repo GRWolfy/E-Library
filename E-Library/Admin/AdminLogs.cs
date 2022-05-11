@@ -1,8 +1,8 @@
 ﻿namespace E_Library.Admin
 {
-    public partial class AdminHistory : Form
+    public partial class AdminLogs : Form
     {
-        public AdminHistory()
+        public AdminLogs()
         {
             InitializeComponent();
         }

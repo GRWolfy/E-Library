@@ -144,14 +144,16 @@ namespace E_Library.Admin
             Connection.con.Close();
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
+        private void btnLogs_Click(object sender, EventArgs e)
         {
-
+            new AdminLogs().Show();
+            Hide();
         }
 
-        private void pbBook_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-
+            new User_Admission.Login().Show();
+            Hide();
         }
     }
 }

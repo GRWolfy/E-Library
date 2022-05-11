@@ -1,6 +1,6 @@
 ﻿namespace E_Library.Admin
 {
-    partial class AdminHistory
+    partial class AdminLogs
     {
         /// <summary>
         /// Required designer variable.

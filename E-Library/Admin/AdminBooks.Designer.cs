@@ -31,7 +31,7 @@ namespace E_Library.Admin
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminBooks));
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            this.btnHistory = new Krypton.Toolkit.KryptonButton();
+            this.btnLogs = new Krypton.Toolkit.KryptonButton();
             this.btnBooks = new Krypton.Toolkit.KryptonButton();
             this.btnAccounts = new Krypton.Toolkit.KryptonButton();
             this.btnLogout = new Krypton.Toolkit.KryptonButton();
@@ -63,7 +63,7 @@ namespace E_Library.Admin
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.btnHistory);
+            this.kryptonPanel1.Controls.Add(this.btnLogs);
             this.kryptonPanel1.Controls.Add(this.btnBooks);
             this.kryptonPanel1.Controls.Add(this.btnAccounts);
             this.kryptonPanel1.Controls.Add(this.btnLogout);
@@ -73,13 +73,14 @@ namespace E_Library.Admin
             this.kryptonPanel1.Size = new System.Drawing.Size(167, 561);
             this.kryptonPanel1.TabIndex = 8;
             // 
-            // btnHistory
+            // btnLogs
             // 
-            this.btnHistory.Location = new System.Drawing.Point(20, 395);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(120, 52);
-            this.btnHistory.TabIndex = 4;
-            this.btnHistory.Values.Text = "History";
+            this.btnLogs.Location = new System.Drawing.Point(20, 395);
+            this.btnLogs.Name = "btnLogs";
+            this.btnLogs.Size = new System.Drawing.Size(120, 52);
+            this.btnLogs.TabIndex = 4;
+            this.btnLogs.Values.Text = "Logs";
+            this.btnLogs.Click += new System.EventHandler(this.btnLogs_Click);
             // 
             // btnBooks
             // 
@@ -105,6 +106,7 @@ namespace E_Library.Admin
             this.btnLogout.Size = new System.Drawing.Size(120, 52);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Values.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnDashboard
             // 
@@ -133,7 +135,7 @@ namespace E_Library.Admin
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(762, 521);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "View";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dgvBooks
@@ -163,9 +165,8 @@ namespace E_Library.Admin
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(762, 521);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Manage";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // btnUpdatepic
             // 
@@ -195,7 +196,6 @@ namespace E_Library.Admin
             this.pbBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBook.TabIndex = 9;
             this.pbBook.TabStop = false;
-            this.pbBook.Click += new System.EventHandler(this.pbBook_Click);
             // 
             // txtBooklocation
             // 
@@ -295,7 +295,7 @@ namespace E_Library.Admin
         #endregion
 
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private Krypton.Toolkit.KryptonButton btnHistory;
+        private Krypton.Toolkit.KryptonButton btnLogs;
         private Krypton.Toolkit.KryptonButton btnBooks;
         private Krypton.Toolkit.KryptonButton btnAccounts;
         private Krypton.Toolkit.KryptonButton btnLogout;

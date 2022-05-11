@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            this.btnHistory = new Krypton.Toolkit.KryptonButton();
+            this.btnLogs = new Krypton.Toolkit.KryptonButton();
             this.btnBooks = new Krypton.Toolkit.KryptonButton();
             this.btnAccounts = new Krypton.Toolkit.KryptonButton();
             this.btnLogout = new Krypton.Toolkit.KryptonButton();
@@ -40,7 +40,7 @@
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.btnHistory);
+            this.kryptonPanel1.Controls.Add(this.btnLogs);
             this.kryptonPanel1.Controls.Add(this.btnBooks);
             this.kryptonPanel1.Controls.Add(this.btnAccounts);
             this.kryptonPanel1.Controls.Add(this.btnLogout);
@@ -50,13 +50,14 @@
             this.kryptonPanel1.Size = new System.Drawing.Size(167, 561);
             this.kryptonPanel1.TabIndex = 2;
             // 
-            // btnHistory
+            // btnLogs
             // 
-            this.btnHistory.Location = new System.Drawing.Point(20, 395);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(120, 52);
-            this.btnHistory.TabIndex = 4;
-            this.btnHistory.Values.Text = "History";
+            this.btnLogs.Location = new System.Drawing.Point(20, 395);
+            this.btnLogs.Name = "btnLogs";
+            this.btnLogs.Size = new System.Drawing.Size(120, 52);
+            this.btnLogs.TabIndex = 4;
+            this.btnLogs.Values.Text = "Logs";
+            this.btnLogs.Click += new System.EventHandler(this.btnLogs_Click);
             // 
             // btnBooks
             // 
@@ -83,6 +84,7 @@
             this.btnLogout.Size = new System.Drawing.Size(120, 52);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Values.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnDashboard
             // 
@@ -114,7 +116,7 @@
         private Krypton.Toolkit.KryptonButton btnLogout;
         private Krypton.Toolkit.KryptonButton btnDashboard;
         private Krypton.Toolkit.KryptonButton btnAccounts;
-        private Krypton.Toolkit.KryptonButton btnHistory;
+        private Krypton.Toolkit.KryptonButton btnLogs;
         private Krypton.Toolkit.KryptonButton btnBooks;
     }
 }

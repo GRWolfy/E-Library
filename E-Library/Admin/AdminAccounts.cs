@@ -96,8 +96,8 @@ namespace E_Library.Admin
 
         private void doResetFields()
         {
+            new AdminAccounts().Show();
             Hide();
-            Show();
             tcAccounts.SelectedIndex = 0;
         }
 
@@ -107,19 +107,23 @@ namespace E_Library.Admin
             books.Show();
             Hide();
         }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            new AdminDashboard().Show();
+            Hide();
+        }
+
+        private void btnLogs_Click(object sender, EventArgs e)
+        {
+            new AdminLogs().Show();
+            Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            new User_Admission.Login().Show();
+            Hide();
+        }
     }
 }
-
-/*
- id
- role
- idnumber
- firstname
- lastname
- gender 
- year
- course
- contactnumber
- email
- address
- */

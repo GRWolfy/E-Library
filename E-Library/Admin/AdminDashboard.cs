@@ -25,5 +25,17 @@
             books.Show();
             Hide();
         }
+
+        private void btnLogs_Click(object sender, EventArgs e)
+        {
+            new AdminLogs().Show();
+            Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            new User_Admission.Login().Show();
+            Hide();
+        }
     }
 }
