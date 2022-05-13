@@ -53,7 +53,8 @@ namespace E_Library.Admin
                 "logs.borrowdatetime AS [BORROW TIME]," +
                 "logs.returndatetime AS [RETURN TIME] " +
                 "FROM logs INNER JOIN books ON logs.bookid = books.bookid " +
-                "INNER JOIN users ON logs.idnumber = users.idnumber";
+                "INNER JOIN users ON logs.idnumber = users.idnumber " +
+                "WHERE returndatetime != 'NEED CONFIRMATION' ";
             Function.fill(Function.gen, dgvLogs);
         }
 
