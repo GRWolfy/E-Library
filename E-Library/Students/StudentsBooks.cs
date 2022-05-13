@@ -22,7 +22,7 @@ namespace E_Library.Students
             Connection.DB();
             Function.gen = "SELECT bookid, bookname AS [NAME]," +
                 "bookauthor AS [AUTHOR]," +
-                "booklocation AS [LOCATION] FROM books WHERE availability = '"+ "available" + "' ";
+                "booklocation AS [LOCATION] FROM books WHERE availability = '"+ "available" + "' AND bookname LIKE '" + txtSearchbook.Text +"%' ";
             Function.fill(Function.gen, dgvBooks);
             dgvBooks.Columns["bookid"].Visible = false;
         }
@@ -62,6 +62,11 @@ namespace E_Library.Students
             bookid = Convert.ToInt32(dgvBooks.Rows[e.RowIndex].Cells["bookid"].Value.ToString());
             ViewBook.directory = "CART";
             new ViewBook().Show();
+        }
+
+        private void txtSearchbook_TextChanged(object sender, EventArgs e)
+        {
+            viewBooks();
         }
     }
 }

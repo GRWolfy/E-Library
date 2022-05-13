@@ -104,6 +104,7 @@
             this.txtSearchbook.Name = "txtSearchbook";
             this.txtSearchbook.Size = new System.Drawing.Size(100, 23);
             this.txtSearchbook.TabIndex = 13;
+            this.txtSearchbook.TextChanged += new System.EventHandler(this.txtSearchbook_TextChanged);
             // 
             // btnCart
             // 

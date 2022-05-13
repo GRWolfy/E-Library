@@ -123,7 +123,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(501, 402);
+            this.btnUpdate.Location = new System.Drawing.Point(507, 408);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(90, 25);
             this.btnUpdate.TabIndex = 67;
@@ -287,6 +287,7 @@
             // 
             // txtIdnumber
             // 
+            this.txtIdnumber.Enabled = false;
             this.txtIdnumber.Location = new System.Drawing.Point(404, 99);
             this.txtIdnumber.Name = "txtIdnumber";
             this.txtIdnumber.Size = new System.Drawing.Size(100, 23);
@@ -294,11 +295,12 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(385, 402);
+            this.btnEdit.Location = new System.Drawing.Point(507, 408);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(90, 25);
             this.btnEdit.TabIndex = 68;
             this.btnEdit.Values.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtConfirmpassword
             // 

@@ -31,9 +31,6 @@
             this.dgvCart = new Krypton.Toolkit.KryptonDataGridView();
             this.btnProceedBorrow = new Krypton.Toolkit.KryptonButton();
             this.btnBack = new Krypton.Toolkit.KryptonButton();
-            this.btnDelete = new Krypton.Toolkit.KryptonButton();
-            this.lblTEST = new Krypton.Toolkit.KryptonLabel();
-            this.btnTEST = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,39 +65,11 @@
             this.btnBack.Values.Text = "Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(277, 518);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(90, 25);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Values.Text = "Delete";
-            // 
-            // lblTEST
-            // 
-            this.lblTEST.Location = new System.Drawing.Point(86, 491);
-            this.lblTEST.Name = "lblTEST";
-            this.lblTEST.Size = new System.Drawing.Size(36, 20);
-            this.lblTEST.TabIndex = 4;
-            this.lblTEST.Values.Text = "TEST";
-            // 
-            // btnTEST
-            // 
-            this.btnTEST.Location = new System.Drawing.Point(91, 526);
-            this.btnTEST.Name = "btnTEST";
-            this.btnTEST.Size = new System.Drawing.Size(90, 25);
-            this.btnTEST.TabIndex = 5;
-            this.btnTEST.Values.Text = "TEST";
-            this.btnTEST.Click += new System.EventHandler(this.btnTEST_Click);
-            // 
             // ViewCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 628);
-            this.Controls.Add(this.btnTEST);
-            this.Controls.Add(this.lblTEST);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnProceedBorrow);
             this.Controls.Add(this.dgvCart);
@@ -110,7 +79,6 @@
             this.Load += new System.EventHandler(this.ViewCart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -119,8 +87,5 @@
         private Krypton.Toolkit.KryptonDataGridView dgvCart;
         private Krypton.Toolkit.KryptonButton btnProceedBorrow;
         private Krypton.Toolkit.KryptonButton btnBack;
-        private Krypton.Toolkit.KryptonButton btnDelete;
-        private Krypton.Toolkit.KryptonLabel lblTEST;
-        private Krypton.Toolkit.KryptonButton btnTEST;
     }
 }

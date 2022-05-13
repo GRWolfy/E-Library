@@ -18,6 +18,7 @@ namespace E_Library.Students
 
         private void ViewCart_Load(object sender, EventArgs e)
         {
+            showDeleteButton(false);
             viewCart();
         }
 
@@ -32,6 +33,7 @@ namespace E_Library.Students
 
         private void dgvCart_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            showDeleteButton(true);
             cartid = Convert.ToInt32(dgvCart.Rows[e.RowIndex].Cells["cartid"].Value);
             Connection.DB();
             var gen = MessageBox.Show("Are you sure you want to delete this book from cart?", "Delete record", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -43,7 +45,11 @@ namespace E_Library.Students
                 Function.command.ExecuteNonQuery();
                 Connection.con.Close();
                 MessageBox.Show("DELETED", "DELETED", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                new ViewCart().Show();
+                Hide();
             }
+
+            showDeleteButton(false);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -65,7 +71,8 @@ namespace E_Library.Students
 
             deleteCart();
 
-            new BorrowMessage().Show();
+            MessageBox.Show("HELLO");
+            new StudentsBooks().Show();
             Hide();
         }
 
@@ -98,9 +105,9 @@ namespace E_Library.Students
             Connection.con.Close();
         }
 
-        private void btnTEST_Click(object sender, EventArgs e)
-        {
-            lblTEST.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy hh:mm tt");
+        private void showDeleteButton(bool value)
+        { 
+            btnProceedBorrow.Visible = value ? false : true;
         }
     }
 }

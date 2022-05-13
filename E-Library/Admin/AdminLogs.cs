@@ -91,6 +91,7 @@ namespace E_Library.Admin
                 var temp = new AdminLogs();
                 temp.Show();
                 temp.tcLogs.SelectedIndex = 0;
+                Hide();
             }
         }
 

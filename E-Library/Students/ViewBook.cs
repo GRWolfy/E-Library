@@ -81,18 +81,35 @@ namespace E_Library.Students
             Function.command = new SqlCommand(Function.gen, Connection.con);
             Function.command.ExecuteNonQuery();
             Connection.con.Close();
+            MessageBox.Show("Wait for the confirmation.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            new StudentsReturn().Show();
+            Hide();
         }
 
         private void btnAddtocart_Click(object sender, EventArgs e)
         {
             Connection.DB();
-            Function.gen = "INSERT INTO cart(idnumber, bookid)" +
-                "VALUES('" + idnumber + "'," +
-                "'" + bookid + "') ";
+            Function.gen = "SELECT * FROM cart WHERE bookid = '" + bookid + "' ";
             Function.command = new SqlCommand(Function.gen, Connection.con);
-            Function.command.ExecuteNonQuery();
-            Connection.con.Close();
-            MessageBox.Show("Book added to cart.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Function.reader = Function.command.ExecuteReader();
+
+            if (Function.reader.HasRows)
+            {
+                MessageBox.Show("Book already added in cart.");
+            }
+            else
+            {
+                Function.reader.Read();
+                Connection.DB();
+                Function.gen = "INSERT INTO cart(idnumber, bookid)" +
+                    "VALUES('" + idnumber + "'," +
+                    "'" + bookid + "') ";
+                Function.command = new SqlCommand(Function.gen, Connection.con);
+                Function.command.ExecuteNonQuery();
+                Connection.con.Close();
+                MessageBox.Show("Book added to cart.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Hide();
+            }
         }
     }
 }
