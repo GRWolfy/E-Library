@@ -15,6 +15,7 @@ namespace E_Library.Students
     {
         public static string directory = "";
         private int bookid;
+        private int logid;
         private int idnumber = User_Admission.Login.idnumber;
 
         public ViewBook()
@@ -77,7 +78,7 @@ namespace E_Library.Students
         {
             Connection.DB();
             Function.gen = "UPDATE logs SET returndatetime = '" + "NEED CONFIRMATION" + "' " +
-                "WHERE bookid = '"+ bookid +"' AND idnumber = '"+ idnumber +"' ";
+                "WHERE bookid = '"+ bookid +"' AND idnumber = '"+ idnumber +"' AND returndatetime = 'PENDING' ";
             Function.command = new SqlCommand(Function.gen, Connection.con);
             Function.command.ExecuteNonQuery();
             Connection.con.Close();

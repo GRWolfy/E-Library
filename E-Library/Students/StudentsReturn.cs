@@ -42,10 +42,6 @@ namespace E_Library.Students
             if (directory.Equals("RETURN"))
             {
                 new ViewBook().Show();
-            } 
-            else
-            {
-                
             }
 
         }
